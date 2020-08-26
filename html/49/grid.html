@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        body {
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(5, 1fr);
+            gap: 20px;
+            background-color: wheat;
+        }
+
+        div {
+            border: 20px double orange;
+            border-radius: 90%;
+            padding: 2em;
+        }
+
+        p {
+            border: 10px solid green;
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .start {
+            grid-row: 1 / 5;
+            grid-column: 1;
+        }
+
+        .end {
+            grid-row: 1 / 5;
+            grid-column: 5;
+        }
+
+        aside {
+            background-color: hotpink;
+        }
+
+        section {
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        .end2 {
+            order: 2;
+            grid-column: 4;
+        }
+
+        article {
+            background-color: chartreuse;
+            color: red;
+            font-size: large;
+            font-family: Impact, fantasy;
+            border: 20px dotted rebeccapurple;
+            order: 1;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            right: .51em;
+            color: royalblue;
+            background-color: springgreen
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS GRID!<br> Check it out!</h1>
+    <aside class="start"></aside>
+    <aside class="start"></aside>
+    <aside class="start"></aside>
+    <aside class="end"></aside>
+    <aside class="end"></aside>
+    <aside class="end"></aside>
+    <section></section>
+    <div class="end2">
+        <p></p>
+    </div>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquam soluta magni maxime asperiores
+        tempora non aperiam at aliquid eius.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repudiandae
+        blanditiis officiis? Itaque a enim perferendis animi repellat unde consequatur?</article>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

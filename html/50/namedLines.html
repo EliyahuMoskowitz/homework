@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(12, [col-start] 1fr);
+            /* col-start 1, col-start 2, etc..*/
+            gap: 2em;
+        }
+
+        body>* {
+            grid-column: 1 / -1;
+        }
+
+        @media screen and (min-width: 500px) {
+
+            aside,
+            .ad {
+                grid-column: col-start / span 3;
+            }
+
+            aside {
+                grid-row: 3;
+            }
+
+            article,
+            footer {
+                grid-column: col-start 4 / -1;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            nav {
+                grid-column: col-start / span 2;
+            }
+
+            article {
+                grid-column: col-start 3 / span 8;
+                grid-row: 2/4;
+            }
+
+            aside,
+            .ad {
+                grid-column: col-start 11 / -1;
+            }
+
+            aside {
+                grid-row: 2;
+            }
+
+            footer {
+                grid-column: col-start / -1;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header goes here</header>
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Main Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita pariatur rem nesciunt non odio adipisci
+            natus, sit delectus porro quae deleniti ut, debitis perferendis sunt qui fuga saepe corrupti. Repudiandae
+            ipsum tenetur reprehenderit sint quo magnam fugiat quam accusantium cupiditate fuga facere perferendis nemo
+            suscipit amet incidunt quisquam, voluptatem eius nam soluta itaque! Tenetur excepturi, aut quisquam commodi
+            nesciunt porro vel velit assumenda quod a. Dolores, debitis? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Voluptatem necessitatibus a, ipsam quaerat perferendis beatae quod, fuga, nisi vel autem
+            quia temporibus officia. Laboriosam saepe facilis quae consectetur recusandae, numquam, fugit aut autem
+            eaque magnam doloribus nesciunt consequuntur natus tenetur at esse tempore suscipit adipisci laborum dolore
+            sequi exercitationem dignissimos? Maiores, in inventore, vel asperiores omnis quos officia nostrum atque
+            fuga, numquam eveniet laborum! Vel, quo debitis autem consectetur repudiandae dolore quia rem laborum
+            consequuntur repellat veniam molestiae eos soluta porro, dolorem perspiciatis accusamus nam. Optio odit
+            voluptate magnam illo architecto quos alias, officiis, doloremque fugiat facere temporibus natus iste!</p>
+    </article>
+    <aside>Aside Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus atque cumque, in distinctio magni
+        nemo
+        laborum inventore ducimus nam tempora obcaecati fuga veritatis repellendus autem!</aside>
+    <div class="ad">Ad goes here</div>
+    <footer>Footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, libero.</footer>
+</body>
+
+</html>

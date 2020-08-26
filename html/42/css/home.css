@@ -1,0 +1,11 @@
+h1, strong{
+    color: rgb(220, 43, 226);
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(255, 165, 80);
+}
+p{
+    color: firebrick;
+    font-size: 200%;
+    background-color: chartreuse;
+}

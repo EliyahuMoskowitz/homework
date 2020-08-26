@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Layouts</title>
+    <style>
+        body {
+            display: grid;
+            grid-template: repeat(7, 1fr) / 1fr;
+            gap: 1em;
+            /* grid-auto-rows: 100px; */
+        }
+
+        div {
+            background-color: orange;
+        }
+
+        @media (min-width: 650px) {
+            body {
+                grid-template: repeat(4, 1fr) / 1fr 1fr;
+                grid-template-areas:
+                    "double double";
+            }
+
+            div {
+                background-color: teal;
+            }
+
+            div:nth-child(1) {
+                /* grid-column: 1 / span 2; */
+                /* grid-row: 1; */      /*don't really always need*/    
+                /* grid-column: 1 / -1; */
+                /* grid-column: 1 / 3; */
+                /* grid-area: 1 / 1 / 1 / -1; */
+                grid-area: double;
+            }
+
+            @media (min-width: 950px) {
+                body {
+                    grid-template: 1fr 1fr / repeat(4, 1fr);
+                    grid-template-areas:
+                        "double double . .";
+                }
+
+                div {
+                    background-color: red;
+                }
+
+                /* .double {
+                    grid-column: 1 / span 2;
+                    grid-row: 1;    /*don't really always need*/
+                  /*grid-column: 1 / 3;
+                    grid-area: 1 / 1 / 1 / span 2;
+                    grid-area: 1 / 1 / 1 / 3;
+                } */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="double">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et distinctio repudiandae veniam
+        temporibus. Sed ab
+        temporibus neque eligendi expedita molestiae. sit amet consectetur adipisicing elit. Et distinctio repudiandae
+        veniam temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab laborum minima voluptatem iste hic quas
+        laboriosam dolorum perspiciatis consectetur possimus! sit amet consectetur adipisicing elit. Et distinctio
+        repudiandae veniam temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque dolores quidem pariatur aliquid
+        voluptatibus, quibusdam accusantium minus eum ea? sit amet consectetur adipisicing elit. Et distinctio
+        repudiandae veniam temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto voluptas quos odit aperiam eveniet dolore
+        illum similique assumenda distinctio fugit. sit amet consectetur adipisicing elit. Et distinctio repudiandae
+        veniam temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores assumenda. Rem odio commodi, soluta
+        tenetur est consectetur porro distinctio! sit amet consectetur adipisicing elit. Et distinctio repudiandae
+        veniam temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero enim ipsum veniam nulla molestias animi
+        veritatis laborum quasi mollitia eligendi. sit amet consectetur adipisicing elit. Et distinctio repudiandae
+        veniam temporibus. Sed ab
+        temporibus neque eligendi expedita sit amet consectetur adipisicing elit. Et distinctio repudiandae veniam
+        temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+    <div>7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius molestias dicta similique exercitationem
+        repellendus et delectus velit distinctio unde ex! sit amet consectetur adipisicing elit. Et distinctio
+        repudiandae veniam temporibus. Sed ab
+        temporibus neque eligendi expedita sit amet consectetur adipisicing elit. Et distinctio repudiandae veniam
+        temporibus. Sed ab
+        temporibus neque eligendi expedita </div>
+</body>
+
+</html>

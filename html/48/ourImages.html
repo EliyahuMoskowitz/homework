@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moskowitz Delight</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/site_wide.css" rel="stylesheet" />
+    <link href="images/radial_graident.jpg" rel="icon" />
+    <style>
+        body {
+            display: flex;
+            /* flex-direction: column-reverse;
+            flex-wrap: wrap-reverse; */
+            flex-flow: column-reverse wrap-reverse;
+            align-content: space-around;
+            justify-content: space-evenly;
+            padding: 2em;
+            margin: 3em;
+            background-color: lightgreen !important;
+            flex: 1 1 25%;
+        }
+
+        body::after {
+            content: "These are our Images";
+            color: purple;
+            font-size: 2em;
+            text-align: center;
+            transform: rotate(25deg) skew(45deg);
+        }
+
+        #end {
+            flex: 2 2 50%;
+            align-self: flex-end;
+            justify-self: center;
+            order: 1;
+        }
+
+        img {
+            width: 350px;
+            height: 350px;
+        }
+
+        h1 {
+            order: 2;
+        }
+
+        .copyright {
+            order: -1;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex Images</h1>
+    <img id="end" src="images/hover.png" alt="">
+    <img src="images/jazz.jpg" alt="">
+    <img src="images/MacandCheese.jpg" alt="">
+    <img src="images/pizza.jpg" alt="">
+    <img src="images/greenCurtain.png" alt="">
+    <img id="end" src="images/Rabbi_Eliyahu_Moskowitz.png" alt="">
+    <img id="end" src="images/radial_graident.jpg" alt="">
+    <img src="images/restaurant.jpg" alt="">
+    <img src="images/salmon.jpg" alt="">
+    <img src="images/tunaQuiche.jpg" alt="">
+    <p class="copyright"> &copy; &nbsp;Moskowitz Delight</p>
+</body>
+
+</html>

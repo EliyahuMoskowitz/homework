@@ -1,0 +1,106 @@
+html{
+    background-color: chartreuse;
+}
+
+h1{
+    border: 1em groove chocolate;
+    border-radius: 64%;
+    color: rgba(24,24,250,1);
+    background-color: aqua;
+    padding: .5em;
+    font-size: 135%;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .6rem;
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 100px;
+    margin-top: 95px;
+    text-transform: capitalize;
+    overflow: auto;
+    transform: rotate(6deg) scale(1.1, 1.5) skew(12deg, 6deg) translate(15px, 5px);
+}
+
+body{
+    color: rgb(72, 0, 13);
+    opacity: 0.98;
+    background-color: hotpink;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25rem;
+    margin: auto;
+    max-width: 1130px;
+    /* width: 80%; */
+    transform: skew(4deg, 4deg); /*skew will ruin the small sreen*/
+}
+
+header p{
+    letter-spacing: 0.25rem;
+    color: rgb(250, 231, 18);
+    transform: translate(12px, -55px) rotate(7deg) skew(15.25deg);
+}
+a{
+text-decoration: none;
+color: rgb(20, 122, 255);
+}
+
+p a{
+    text-shadow: 2px 4px 150px rgb(72, 100, 239);
+    text-decoration: underline;
+    color: rgb(20, 255, 59);
+    opacity: 1;
+}
+
+a:focus, #del{
+    border: 1px dashed black;
+}
+a:active, div{
+border: 2px solid wheat;
+}
+
+a:hover{
+background-color: lightsalmon;
+}
+
+a:link{
+   font-style: italic;
+}
+
+a:visited{
+   font-style: normal;
+}
+
+.copyright{
+ background-color: black;
+ color: beige;
+ text-align: center;   
+}
+
+#resaurant_qualifications, .con{
+    line-height: 200%;
+}
+strong em, section{
+    text-shadow: 4px 3px 5px saddlebrown;
+    text-transform: uppercase;
+    border: none;
+}
+h3{
+    padding-left: 50px;
+    color: rgb(80, 191, 255);
+}
+img{
+    width: 550px;
+    height: 400px;
+}
+
+/* #piz {
+    background-image: url("../images/pizza.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#sal{
+    background-image: url("../images/salmon.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+} */

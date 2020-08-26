@@ -1,0 +1,52 @@
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    color: pink;
+    background-color: purple;
+  }
+
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  #contactForm {
+    background-color: pink;
+    color: blue;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 17em;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8.5em;
+    margin-top: -5em;
+    border: 5px dotted yellow;
+    border-radius: 20%;
+    display: none;
+  }
+
+  .formGroup {
+    margin-bottom: .5em;
+  }
+
+  .formGroup label {
+    width: 3em;
+    display: inline-block;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  #noCont{
+    text-align: center;
+  }
+
+  #add{
+    color: blue;
+    text-transform: capitalize;
+    font-size: large;
+  }

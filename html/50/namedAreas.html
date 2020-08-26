@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2em;
+        }
+
+        body>* {
+            grid-column: 1 / -1;
+        }
+
+        @media screen and (min-width: 600px) {
+            body {
+                grid-template-areas:
+                    "header header header header header header header header header header header header "
+                    "nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav    nav"
+                    "sidebar sidebar sidebar read read  read   read   read   read   read   read   read"
+                    "ad      ad      ad   footer footer footer footer footer footer footer footer footer ";
+            }
+
+            header {
+                grid-area: header;
+            }
+
+            footer {
+                grid-area: footer;
+            }
+
+            nav {
+                grid-area: nav;
+            }
+
+            aside {
+                grid-area: sidebar;
+            }
+
+            article {
+                grid-area: read;
+            }
+
+            .ad {
+                grid-area: ad;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body {
+                grid-template-areas:
+                    "header header header header header header header header header header header header "
+                    "nav    nav    read   read   read   read   read   read   read   read   sidebar sidebar"
+                    "nav    nav    read   read   read   read   read   read   read   read   ad     ad"
+                    "footer footer footer footer footer footer footer footer footer footer footer footer ";
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header goes here</header>
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Main Content</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita pariatur rem nesciunt non odio adipisci
+            natus, sit delectus porro quae deleniti ut, debitis perferendis sunt qui fuga saepe corrupti. Repudiandae
+            ipsum tenetur reprehenderit sint quo magnam fugiat quam accusantium cupiditate fuga facere perferendis nemo
+            suscipit amet incidunt quisquam, voluptatem eius nam soluta itaque! Tenetur excepturi, aut quisquam commodi
+            nesciunt porro vel velit assumenda quod a. Dolores, debitis? Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Voluptatem necessitatibus a, ipsam quaerat perferendis beatae quod, fuga, nisi vel autem
+            quia temporibus officia. Laboriosam saepe facilis quae consectetur recusandae, numquam, fugit aut autem
+            eaque magnam doloribus nesciunt consequuntur natus tenetur at esse tempore suscipit adipisci laborum dolore
+            sequi exercitationem dignissimos? Maiores, in inventore, vel asperiores omnis quos officia nostrum atque
+            fuga, numquam eveniet laborum! Vel, quo debitis autem consectetur repudiandae dolore quia rem laborum
+            consequuntur repellat veniam molestiae eos soluta porro, dolorem perspiciatis accusamus nam. Optio odit
+            voluptate magnam illo architecto quos alias, officiis, doloremque fugiat facere temporibus natus iste!</p>
+    </article>
+    <aside>Aside Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus atque cumque, in distinctio magni
+        nemo
+        laborum inventore ducimus nam tempora obcaecati fuga veritatis repellendus autem!</aside>
+    <div class="ad">Ad goes here</div>
+    <footer>Footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, libero.</footer>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+html{
+    background-image: url("../images/greenCurtain.png");
+}
+
+h1{
+    border: 1em groove deeppink;
+    border-radius: 64%;
+    color: rgba(24,24,250,1);
+    background-color: aqua;
+    font-size: 135%;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: impact, 'Times New Roman', Helvetica, fantasy;
+    letter-spacing: .6rem;
+    text-align: center;
+    margin-left: 22rem;
+    margin-right: 6.25rem;
+    margin-top: 6rem;
+    text-transform: capitalize;
+    min-width: min-content;
+    transform: rotate(1deg) scale(1.1, 1.5) skew(12deg, 6deg) translate(65px, 1px);
+}
+@font-face{
+    font-family: "Moskowitz Font";
+    src: url("../fonts/ourFont.ttf");
+}
+
+body{
+    color: rgb(252, 200, 100);
+    opacity: 0.98;
+    background: rgb(202, 22, 68);
+    background: linear-gradient(177deg, rgba(252, 22, 68, 1) 10%, rgba(47, 202, 22, 1) 23%, rgba(138, 31, 141, 1) 63%, rgba(22, 22, 202, 1) 74%, rgba(255, 0, 95, 1) 100%);
+    font-family: Helvetica, cursive;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: auto;
+    max-width: 1180px;
+}
+
+header p{
+    letter-spacing: 0.25rem;
+    color: rgb(250, 231, 18);
+    transform: translate(12px, 80px) rotate(10deg) skew(45.25deg);
+}
+
+a{
+text-decoration: none;
+color: rgb(20, 222, 255);
+}
+
+p a, .menu{
+    text-shadow: 2px 4px 150px rgb(72, 100, 239);
+    text-decoration: underline;
+    color: rgb(20, 255, 59);
+    opacity: 1;
+}
+
+a:focus, #del{
+    border: 1px dashed black;
+}
+
+a:active{
+border: 2px solid wheat;
+color: blueviolet;
+}
+
+a:hover{
+background-color: lightsalmon;
+}
+
+a:link{
+   font-style: italic;
+}
+
+a:visited{
+   font-style: normal;
+}
+
+.copyright{
+ background-color: black;
+ color: beige;
+ text-align: center;  
+ font-family: fantasy; 
+}
+
+#resaurant_qualifications, .con{
+    line-height: 200%;
+}
+strong em, section{
+    text-shadow: 4px 3px 5px saddlebrown;
+    text-transform: uppercase;
+    border: none;
+}
+
+img{
+    width: 550px;
+    height: 400px;
+}
+
+li{
+    list-style-position: inside;
+    list-style-type: hebrew; 
+    color: rgb(135, 222, 139); 
+    font-size: 25px;
+}
+
+.menu_item{
+    color: rgb(20, 251, 255);
+    border: 7px double purple;
+    border-radius: 40%;
+    width: fit-content;
+    list-style-type: none; 
+    font-family: 'Piedra', cursive;
+}
+
+h4{
+    text-decoration: underline;
+    font-family: 'Moskowitz Font', serif;
+    font-size: 1.25rem;
+    color: black;
+    padding-left: 1.5rem;
+}
+
+.mashgiach {
+    color:lightgreen;
+    margin: auto;
+    font-size: 35px;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    background-image: url("../images/Rabbi_Eliyahu_Moskowitz.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .mashgiach:hover{
+    background-image: url("../images/hover.png");
+    color: firebrick;
+    cursor: not-allowed;
+  }
+
+  #video{
+    height: 200px;
+    width: 350px;
+    position: fixed;
+    right: 1em;
+  }
+  .message{
+    position: fixed;
+    top: 15em;
+    right: 20em;
+    border: 10px dotted gold;
+    border-radius: 100%;
+    padding: 25px;
+    color: darkred;
+    background-image: url("../images/pickle.png");
+    background-size: cover;
+  }
+  #restImg{
+    border: 1.5em solid pink;
+  }
+  #audioParent{
+      width: 550px;
+      margin: auto;
+      position: relative;
+  }
+  #audioHome{
+      position: absolute;
+      top: -2em;
+      left: -4em;
+      transform: rotate(-12.25deg);
+  }

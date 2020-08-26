@@ -1,0 +1,13 @@
+ h1{
+color: brown;
+ background-color: cyan;
+  text-align: center;
+  font-size: 2rem;
+ }
+ 
+ p{
+ color: rgb(68, 0, 255);
+ background-color: cyan;
+text-align: center;
+ font-size: 2rem; 
+}

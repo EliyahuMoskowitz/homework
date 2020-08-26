@@ -1,0 +1,129 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+nav, footer{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 10%;  
+}
+aside, ul{
+    grid-row: 2;
+    margin: 0 !important;  /*must take away some bootstrap*/
+    padding: 0 !important;
+}
+nav{
+    top: 0;
+}
+footer{
+    bottom: 0;
+    color: white;
+}
+li{
+    list-style-type: none;
+    display: inline;
+}
+li>a{
+    color: white;
+    text-decoration: none;
+    margin: 1.5%;
+}
+li>a:hover{
+    color: red;
+    text-decoration: underline;
+}
+h1{
+    text-transform: uppercase;
+}
+nav+div{
+   width: 80% !important;  /*need important because of bootstrap*/
+   margin-bottom: 65px;
+}
+main{
+    height: 250px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 50px 0 0 0 !important;
+    margin: 0 !important;
+}
+header{
+    grid-row: 2;
+}
+
+.justify{
+    text-align: justify;
+}
+img, video{
+    width: 100%;
+}
+input[required]{
+    border-radius: 10%;
+    box-shadow: 9px 9px 9px black;
+}
+input[type="submit"]{
+    border-radius: 10%;
+    border-color: #e9ecef;
+}
+label{
+    display: block;
+}
+table{
+    margin: auto;
+    width: 83%;
+}
+.tbl{
+    overflow-x: auto;
+}
+td, th{
+    border: 2px solid black;
+}
+td{
+    text-align: right;
+}
+th{
+    text-align: center;
+}
+tr>td:first-child{
+    font-weight: bold;
+}
+tr>td:last-child{
+    color: red;
+}
+tbody tr:nth-child(odd){
+    background-color: #e9ecef;
+}
+tbody tr:nth-child(even){
+    background-color: lightyellow;
+}
+tbody tr:hover{
+    background-color: lightblue;
+}
+caption{
+    caption-side: top;
+    color: black;
+    font-size: 2rem;
+}
+
+@media (min-width: 1000px){
+    .bigGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 3em;
+    }
+    .bigGrid>article:first-child, .bigGrid>article:nth-child(2){
+        border-right: 1px solid black;
+        padding-right: 2em;
+    }
+    .bigGrid>article:nth-child(2), .bigGrid>article:nth-child(3){
+        padding-left: 2em;
+    }
+    label{
+        display: inline;
+    }
+    input{
+        margin-right: 1em;
+    }
+}

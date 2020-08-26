@@ -1,0 +1,20 @@
+h1{
+    color: rgb(2,250,78);
+    background-color: plum;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+h3{
+    color: purple;
+    background-color: gold;
+    font-style: inherit;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+p{
+    color: deeppink;
+    background-color: lightblue;
+    font-family: fantasy;
+    font-size: 22px;
+}
