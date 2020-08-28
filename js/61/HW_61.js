@@ -1,6 +1,11 @@
 (function () {
     'use strict';
 
+    const link = document.createElement('link');
+    link.setAttribute('href', 'HW_61.css');
+    link.setAttribute('rel', 'stylesheet');
+    document.head.appendChild(link);
+
     function getID(name) {
         return document.getElementById(name);
     }

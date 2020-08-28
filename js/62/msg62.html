@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>msg62</title>
+  <style>
+    .messageBox {
+      background-color: violet !important;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="msgText" value="Is this enough homework?" />
+  <input type="checkbox" id="modal">
+  <button id="addMsg">add</button>
+  <hr>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quasi animi veniam quos, maiores, accusamus vel
+  rem delectus porro quam doloremque! Nobis minima fuga perspiciatis qui quam fugiat officia, quia deleniti, nihil
+  blanditiis rem ab ut expedita molestiae? Explicabo esse adipisci veritatis, autem vel suscipit consectetur molestias
+  ab maxime eos cumque ut assumenda aspernatur animi laboriosam beatae nulla reiciendis minima voluptatibus rerum
+  dignissimos fugiat asperiores expedita magni! Vel voluptatem aperiam sapiente pariatur veritatis, sunt quod
+  provident cupiditate culpa quae consectetur dignissimos aliquam, quisquam cum, porro nam velit molestiae voluptas in
+  molestias laborum exercitationem laboriosam dolorum. Optio eius aperiam quia amet?
+  <script src="msg62.js"></script>
+  <script>
+    pcs.messageBox.show('This is a test of the emergency broadcast system');
+
+    const msgTextInput = document.getElementById('msgText');
+    const modalCheckbox = document.getElementById('modal');
+    document.getElementById('addMsg').addEventListener('click', () => {
+      pcs.messageBox.show(msgTextInput.value, modalCheckbox.checked, ['yes', 'no', 'maybe', 'so'], function (theChoice) {
+        console.log(`You picked "${theChoice}!!"`);
+      });
+    });
+  </script>
+</body>
+
+</html>
