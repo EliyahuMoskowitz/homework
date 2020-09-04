@@ -1,0 +1,18 @@
+input,
+label,
+button {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    margin: 0.5em;
+    background-color: aqua;
+    color: darkgreen;
+    font-family: fantasy;
+}
+div{
+    font-size: 2rem;
+    font-family: Cambria, serif;
+    color: purple;
+    background-color: royalblue;
+    width: fit-content;
+}

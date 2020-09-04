@@ -1,6 +1,8 @@
 window.pcs = function (id) {
   'use strict';
 
+  const theElem = get(id);
+
   function get(id) {
     return document.getElementById(id);
   }
@@ -14,15 +16,15 @@ window.pcs = function (id) {
     return getComputedStyle(element)[property];
   }
 
-  let keys = [], values = [];
-  function setData(key, value) {
-    keys.push(key);
-    values.push(value);
-  }
+  // let keys = [], values = [];
+  // function setData(key, value) {
+  //   keys.push(key);
+  //   values.push(value);
+  // }
 
-  function getData(key) {
-    return values[keys.findIndex(e => e === key)];
-  }
+  // function getData(key) {
+  //   return values[keys.findIndex(e => e === key)];
+  // }
 
   function getColorPart() {
     return Math.floor(Math.random() * 256);
@@ -32,9 +34,6 @@ window.pcs = function (id) {
   for (let i = 0; i < 10000; i++) {
     colors.push(`rgb(${getColorPart()}, ${getColorPart()}, ${getColorPart()})`);
   }
-
-  const theElem = get(id);
-
 
   return {
     /*setCss: (property, value) => setCss(theElem, property, value),
@@ -58,22 +57,28 @@ window.pcs = function (id) {
       setCss(theElem, 'display', 'block');
       return this;
     },
-    flash: function (time, speed = 1000) {
-      let stop = 0, run = 0;
-      setInterval(() => ++stop, 1000);
-      this.css('backgroundColor', colors[run++]);
-      setInterval(() => {
-        if (stop < time) {
-          this.css('backgroundColor', colors[run++]);
-        }
+    flash: function (time = 4000, speed = 1000) {
+      let run = 0;
+      let old = this.css('color');
+      this.css('color', colors[run++]);
+      let intervalId = setInterval(() => {
+        this.css('color', colors[run++]);
       }, speed);
+      setTimeout(() => {
+        clearInterval(intervalId);
+        this.css('color', old);
+      }, time);
       return this;
     },
     data: function (key, value) {
+      let a = theElem.data = theElem.data || {};
+
       if (arguments.length < 2) { // get
-        return getData(key);
+        //return getData(key);
+        return a[key];
       }
-      setData(key, value);
+      // setData(key, value);
+      a[key] = value;
       return this;
     }
   };
