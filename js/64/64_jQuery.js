@@ -27,7 +27,7 @@
         }
     });
 
-    $('<form><form/>')
+    const form = $('<form><form/>')
         .append(labName)
         .append(adrName)
         .append(ch)
@@ -42,7 +42,7 @@
             const addressDiv = $('<div><div/>');
             nameDiv.text(name.val());
             addressDiv.text(address.val());
-            //form.reset();
+            form[0].reset();
             body.prepend(nameDiv);
             body.append(addressDiv);
         }
@@ -53,7 +53,7 @@
 
     //this is for jQuery interaction with DOM. Above is jQuery creating the entire DOM
 
-    // /*const form = */$('#form')
+    // const form = $('#form')
     //     .submit(event => display(event));
 
     // const body = $('body');
@@ -77,7 +77,7 @@
     //         const div2 = $('<div><div/>');
     //         div.text($('#name').val());
     //         div2.text($('#address').val());
-    //         // form.reset();
+    //         form[0].reset();
     //         body.prepend(div);
     //         body.append(div2);
     //     }
