@@ -1,39 +1,40 @@
 (function () {
     'use strict';
 
+    const pre = $('pre').addClass('content');
+    const input = $('input');
+    const loading = $('<span>Loading.......<span>')
+        .addClass('load')
+        .appendTo(document.body).hide();
+
     $('button').click(() => {
-        const loading = $('<span>Loading.......<span>');
-        loading.addClass('load')
-            .appendTo(document.body);
+        pre.text('');
+        loading.show();
 
-        const div = $('div').addClass('content');
-        const input = $('input');
+        const fileName = $('input').val();
 
-        setTimeout(() => {
-            const fileName = $('input').val();
+        // const request = new XMLHttpRequest();
+        // request.open('GET', fileName);
+        // request.send();
+        // request.onload = () => {
+        //     if (request.status < 400) {
+        //         pre.text(request.responseText);
+        //     } else {
+        //         msgBox(`Sorry! you got a ${request.status} which means that ${fileName} is ${request.statusText}`);
+        //     }
+        //     loading.hide();
+        // };
+        // request.onerror = () => {
+        //     msgBox('Can not load local resource for security reasons, sorry!'); loading.hide();
+        // };
 
-            // const request = new XMLHttpRequest();
-            // request.open('GET', fileName);
-            // request.send();
-            // request.onload = () => {
-            //     if (request.status < 400) {
-            //         div.text(request.responseText);
-            //     } else {
-            //         msgBox(`Sorry! you got a ${request.status} which means that ${fileName} is ${request.statusText}`);
-            //     }
-            // };
-            // request.onerror = () => {
-            //     msgBox('Can not load local resource for security reasons, sorry!');
-            // };
-
-            fetch(fileName)
-                .then(response => response.status < 400 ? response.text() :
-                    msgBox(`Sorry! you got a ${response.status} which means that ${fileName} is ${response.statusText}`))
-                .then(fileText => div.text(fileText))
-                .catch(errorMessage => msgBox(errorMessage));
-            loading.remove();
-            input.val('');
-        }, 1300);
+        fetch(fileName)
+            .then(response => response.status < 400 ? response.text() :
+                msgBox(`Sorry! you got a ${response.status} which means that ${fileName} is ${response.statusText}`))
+            .then(fileText => pre.text(fileText))
+            .catch(errorMessage => msgBox(errorMessage))
+            .finally(() => loading.hide());
+        input.val('');
     });
 
     function msgBox(msg) {

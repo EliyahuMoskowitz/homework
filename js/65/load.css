@@ -48,6 +48,7 @@
     color: blue;
     background-color: pink;
     font-family: monospace;
+    overflow: auto;
 }
 
 input{
