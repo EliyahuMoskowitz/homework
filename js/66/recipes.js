@@ -8,8 +8,8 @@
         showRecipe(this.id);
     });
     $('#clear').click(() => {
-        dName.text('');
-        dIng.text('');
+        dName.empty();
+        dIng.empty();
         img.hide();
     });
 
@@ -23,9 +23,12 @@
                 return r.json();
             })
             .then(r => {
-                let name = r[find].name;
+                let name = r[find].name, ing = r[find].ingredients;
                 dName.text(name);
-                dIng.text(r[find].ingredients);
+                dIng.empty();
+                ing.forEach(i => {
+                    dIng.text(`${dIng.text()} ${i}, `);
+                });
                 img.prop('src', r[find].url).prop('alt', name).addClass('img').show();
             })
             .catch(error => dName.text(error));

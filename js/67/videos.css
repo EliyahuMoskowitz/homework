@@ -1,0 +1,19 @@
+body{
+    background-color: greenyellow;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+section{
+    color: dodgerblue;
+    font-size: 1.5rem;
+    text-align: center;
+}
+img, video{
+    width: 250px;
+    height: 200px;
+    max-width: fit-content;
+}
+div{
+    margin: 1rem;
+}
