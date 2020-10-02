@@ -1,0 +1,73 @@
+html{
+    background-color: lightpink;
+}
+.inputs{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    background-color: yellow;
+    padding: 0.5rem;
+    margin: 10px;
+    border: 10px dashed rgb(236, 12, 50);
+    border-radius: 10%;
+}
+.inputs:hover{
+    background-color: rgb(236, 12, 50);
+    border-color: yellow;
+}
+#getLocation{
+    background-color: rgb(98, 12, 236);
+    border-color: rgb(0, 255, 21);
+}
+#getZmanim{
+    margin-left: 25%;
+    margin-bottom: 50px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    background-color: lawngreen;
+    padding: 1rem;
+    border: 10px double purple;
+    border-radius: 50%;
+}
+#getZmanim:hover, #getLocation:hover{
+    color: lawngreen;
+    background-color: red;
+    border-color: hotpink;
+    border-radius: 50%;
+}
+.showResults{
+    margin: auto;
+    width: 60%;
+    max-height: 300px;
+    overflow-y: auto;
+    color: darkblue;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 900;
+    background-color: lightsalmon;
+    padding: 1rem;
+}
+.resultHeadings{
+    color: aqua;
+    font-family: monospace;
+    font-size: 1.35rem;
+    padding-right: 10px;
+}
+#locationStatus{
+    color: green;
+    font-family: fantasy;
+    font-size: 2rem;
+}
+#all{
+    color: red;
+    background-color: greenyellow;
+    font-size: 1rem;
+    margin: 1rem;
+}
+#all:hover{
+    color: blue;
+    background-color: pink;
+    font-style: italic;
+}

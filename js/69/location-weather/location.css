@@ -1,0 +1,59 @@
+body{
+    width: 95%;
+    text-align: center;
+    background-color: khaki;
+}
+#find-me{
+    color: aqua;
+    background-color: black;
+    border: 15px solid salmon;
+    border-radius: 5%;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 10px;
+}
+#find-me:hover, #find-me:focus{
+    color: grey;
+    background-color: aqua;
+    border: 15px solid blue;
+    border-radius: 5%;
+}
+#name{
+    color: indigo;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: fantasy;
+}
+#units{
+    display: block;
+    margin: auto;
+    background-color: aquamarine;
+    border: 5px solid gold;
+    border-radius: 1%;
+    padding: 1rem;
+    width: 200px;
+}
+#map-link{
+    color: red;
+    font-size: 1.5rem;
+    padding-bottom: 10rem;
+}
+#map-link:hover{
+    color: rgb(128, 0, 122);
+    text-transform: uppercase;
+}
+aside{
+    color: green;
+    font-size: 2rem;
+    font-family: cursive;
+}
+#status{
+    color: blueviolet;
+    font-size: 1.25rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
