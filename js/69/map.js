@@ -6,8 +6,7 @@ function initMap() {
     const defIMG = '../68/images/waterfall.jpg', defMarker = 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png';
     function success(position, defTitle) {
         console.log(position);
-        let defLat = 40.5, defLng = -74;//, lat = position.coords.latitude, lng = position.coords.longitude;
-        location = { lat: position.coords.latitude || defLat, lng: position.coords.longitude || defLng };
+        location = { lat: position.coords.latitude, lng: position.coords.longitude };
         origLoc = location;
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 7,
@@ -64,14 +63,15 @@ function initMap() {
             });
     });
     const defaultTitle = 'Could not find your location. Showing New York';
+    const defPos = { coords: { latitude: 40.5, longitude: -74 } };
     function error() {
         console.error('Unable to retrieve your location');
-        success({ coords: 1 }, defaultTitle);
+        success(defPos, defaultTitle);
     }
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error);
     } else {
         console.error('Browser does not support geoLocation');
-        success({ coords: 1 }, defaultTitle);
+        success(defPos, defaultTitle);
     }
 }
