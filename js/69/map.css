@@ -1,0 +1,89 @@
+body{
+    background-color: lightblue;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 50px;
+    height: 100%;
+}
+header{
+    text-align: center;
+    background-color: blue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+#submit, #search, #maxRows{/*header >*/
+    background-color: lightblue;
+    color: darkblue;
+    font-weight:bold;
+    padding: 0.5rem;
+    margin-right: 5px;
+    border: 10px solid pink;
+    border-radius: 20%;
+    text-align: center;
+}
+#maxRows{
+    width: 65px;
+}
+main{
+    width: 100%;
+    height: 600px;
+}
+#map{
+   width: 100%; 
+   height: 100%;
+}
+#sidebar{
+    height: 600px;
+}
+#side{
+    overflow-y: auto;
+    border-right: 1px solid blue;
+    height: 100%;
+    box-sizing: border-box;
+    /* max-height: max-content; */
+}
+.items{
+    border: 20px solid salmon;
+    background-color: lightcyan;
+    color: darkgreen;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0.5rem;
+    overflow: auto;
+    text-align: center;
+}
+img{
+    width: 250px;
+    height: 175px;
+}
+#title{
+    font-family: fantasy;
+}
+#sum, #infoSum{
+    text-align: justify;
+    font-style: italic;
+}
+#infoSum{
+    font-family: cursive;
+    color: seagreen;
+}
+.block, img{
+    display: block;
+}
+.wikAnc:hover{
+    color: rgb(214, 15, 48);
+    font-size: 1.5rem;
+} 
+/*#locFind{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    background-color: darkmagenta;
+    columns: yellow;
+    display: none;
+} */
