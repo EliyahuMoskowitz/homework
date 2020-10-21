@@ -56,17 +56,19 @@
         });
         next = $('<img src="images/next.png" class="nextPrevious" id="next">')
             .click(function () {
-                if (run < theCurrentPix.length - 1) {
-                    figure.empty();
-                    figure.append(theElements[++run]);
+                if (run >= theCurrentPix.length) {
+                    run = -1;
                 }
+                figure.empty();
+                figure.append(theElements[++run]);
             });
         previous = $('<img src="images/previous.png" class="nextPrevious" id="previous">')
             .click(() => {
-                if (run > 0) {
-                    figure.empty();
-                    figure.append(theElements[--run]);
+                if (run <= 0) {
+                    run = theCurrentPix.length;
                 }
+                figure.empty();
+                figure.append(theElements[--run]);
             });
         figure.append(theElements[run]);
         all.append(next).prepend(previous);

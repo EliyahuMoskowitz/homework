@@ -184,6 +184,12 @@ function initMap() {
                                 } : null,
                                 title: item.title
                             });
+                            oldMark.addListener('click', function () {
+                                infoWindow.close();
+                                infoWindow.setContent(`<span id="infoSum" class="block">${item.summary}</span>
+                            <a class="wikAnc" href="https://${item.wikipediaUrl}" target="_blank">See More On Wikepedia</a>`);
+                                infoWindow.open(map, this);
+                            });
                             markerArray.push(oldMark);
                             $(`<section class="items"><span id="title" class="block">${item.title}</span><img src="${item.thumbnailImg || defIMG}"/>
                     <sapn id="sum" class="block">${item.summary}</span></section>`).click(() => {
