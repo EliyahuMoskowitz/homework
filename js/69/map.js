@@ -34,7 +34,12 @@ function initMap() {
         marker.setTitle(theTitle);
         marker.setAnimation(google.maps.Animation.DROP);
         fetch(`http://api.geonames.org/wikipediaSearch?q=${$('#search').val()}&maxRows=${$('#maxRows').val()}&username=${geoUser}&type=json`)
-            .then(r => r.json())
+            .then(r => {
+                if (!r.ok) {
+                    throw new Error(`${r.status} which means ${r.statusText}`);
+                }
+                return r.json();
+            })
             //.then(r => console.log(r));
             .then(set => {
                 // map.zoom = 0;
@@ -46,10 +51,10 @@ function initMap() {
                         map.panTo(location); //map.zoom = 9;
                         infoWindow.close();
                         marker.setPosition(location);
-                        marker.setIcon({
-                            url: item.thumbnailImg || defMarker,
-                            scaledSize: new google.maps.Size(27, 43)
-                        });
+                        marker.setIcon(item.thumbnailImg ? {
+                            url: item.thumbnailImg,// || defMarker,
+                            scaledSize: new google.maps.Size(65, 65)
+                        } : null);
                         marker.setTitle(item.title);
                         marker.setAnimation(google.maps.Animation.BOUNCE);
                         marker.addListener('click', function () {
@@ -60,7 +65,7 @@ function initMap() {
                         });
                     }).appendTo(side);
                 });
-            });
+            }).catch(e => alert(e));
     });
     const defaultTitle = 'Could not find your location. Showing New York';
     const defPos = { coords: { latitude: 40.5, longitude: -74 } };
