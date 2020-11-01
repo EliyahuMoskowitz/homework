@@ -22,6 +22,7 @@ function Plane(color) {
 // Plane.prototype = Vehicle.prototype; wrong: gets the other vehicles also to say Flying..
 // Plane.prototype = new Vehicle();     works. Now other vehicle says going. But wasted color in prototype of plane
 Plane.prototype = Object.create(Vehicle.prototype); //WORKS and also no extra unknown color in plane's prototype 
+Plane.prototype.constructor = Plane;
 
 Plane.prototype.go = function (speed = 0) {
     this.speed = speed;
