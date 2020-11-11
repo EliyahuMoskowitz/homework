@@ -9,11 +9,19 @@
 </head>
 
 <body>
-    Amount of Ants to Add: <input id="amount" type="number" value="1">
-    Color: <input id="color" type="color">
-    <button id="add">Add Ants</button>
-    <canvas id="theCanvas"></canvas>
+    <div class="controls">
+        <section>Amount of Ants to Add: <input id="amount" type="number" value="1">
+            Color: <input id="color" type="color">
+            <button id="add">Add Ants</button></section>
+        <!-- <input id="speed" type="number" placeholder="speed"> -->
+        <button id="clearAnts" class="clear">Clear Ants</button><button id="clearFood" class="clear">Clear Food</button>
+        <section> Amount of Food to Add: <input id="amountFood" type="number" value="1">
+            Color: <input id="colorFood" type="color">
+            <button id="addFood">Add Food</button></section>
+    </div>
 
+
+    <canvas id="theCanvas"></canvas>
     <!-- <div id="home">HOME</div> -->
 
     <script src="ants.js"></script>
