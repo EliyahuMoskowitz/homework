@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts_61</title>
+  <link rel="stylesheet" href="contacts61.css">
+</head>
+
+<body>
+  <button id="add">add contact</button>
+  <table id="contacts">
+    <thead>
+      <tr>
+        <td>first</td>
+        <td>last</td>
+        <td>email</td>
+        <td>phone</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4" id="noCont">no contacts loaded</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form id="contactForm">
+    <div class="formGroup">
+      <label for="first">first:</label>
+      <input id="first">
+    </div>
+    <div class="formGroup">
+      <label for="last">last:</label>
+      <input id="last" required>
+    </div>
+    <div class="formGroup">
+      <label for="email">email:</label>
+      <input id="email" type="email">
+    </div>
+    <div class="formGroup">
+      <label for="phone">phone:</label>
+      <input id="phone">
+    </div>
+    <div class="buttons">
+      <button>add</button>
+      <button type="button" id="cancel">cancel</button>
+    </div>
+  </form>
+  <script src="contacts61.js"></script>
+</body>
+
+</html>

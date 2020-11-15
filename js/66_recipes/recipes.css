@@ -1,0 +1,44 @@
+button{
+    font-size: 1.5rem;
+    color: blue;
+    background-color: chartreuse;
+    font-family: Impact, fantasy;
+    border: 3px solid pink;
+    padding: 0.3rem;
+    margin-bottom: 1em;
+}
+body{
+    text-align: center;
+    background-color: lightcyan;
+    color: magenta;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2rem;
+}
+button:hover{
+    border-color: blue;
+    background-color: pink;
+    color: white;
+}
+div{
+    border-color: blue;
+    background-color: pink;
+    color: purple;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: monospace;
+}
+.img{
+    width: 650px;
+    height: 400px;
+}
+#clear{
+    color: maroon;
+    font-family: fantasy;
+}
+#d-name{
+    color: rgb(20, 220, 125);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. Potato Head</title>
+  <link href="media/potato-favicon.png" rel="icon" />
+  <link rel="stylesheet" href="71.css">
+</head>
+
+<body>
+  <audio id="backSong" src="songs/MachaBracha.m4a" controls autoplay loop></audio>
+  <audio id="whistle1" src="songs/whistle.m4a"></audio>
+  <audio id="whistle2" src="songs/whistle2.m4a"></audio>
+  <header>
+    <h1>Welcome to the Mr Potato Head Game!!</h1>
+    <h2>Drag the parts to where you want</h2>
+    <h3>Click with Ctrl on parts out of Tool Box to resize</h3>
+    <div id="song">
+      <h4>Choose Background Song</h4>
+      <select name="page" id="page">
+        <option value="songs/MachaBracha.m4a">Mach a Bracha</option>
+        <option value="songs/ivriAnochi.m4a">Ivri Anochi</option>
+        <option value="songs/upharatzta.mp3">Upharatzta</option>
+        <option value="songs/jazz.mp3">Jazz</option>
+      </select>
+    </div>
+  </header>
+  <button id="clearStorage">Reset</button>
+  <div id="toolBox">
+    <h4>Tool Box</h4>
+    <hr>
+    <main id="tools">
+      <img src="media/tounge.jpg" alt="tounge" class="box" id="1">
+      <img src="media/smile.jpg" alt="smile" class="box" id="2">
+      <img src="media/shoes.jpg" alt="shoes" class="box" id="3">
+      <img src="media/righthand.png" alt="righthand" class="box" id="4">
+      <img src="media/lefthand.png" alt="lefthand" class="box" id="5">
+      <img src="media/redBall.jpg" alt="redBall" class="box" id="6">
+      <img src="media/redBall2.jpg" alt="redBall" class="box" id="7">
+      <img src="media/mustache.jpg" alt="mustache" class="box" id="8">
+      <img src="media/mustache2.jpg" alt="mustache2" class="box" id="9">
+      <img src="media/lips.png" alt="lips" class="box" id="10">
+      <img src="media/eyes.png" alt="eyes1" class="box" id="11">
+      <img src="media/eyes2.jpg" alt="eyes2" class="box" id="12">
+      <img src="media/leftEar.png" alt="ears" class="box" id="13">
+      <img src="media/rightEar.png" alt="ears" class="box" id="14">
+      <img src="media/cap.jpg" alt="cap" class="box" id="15">
+      <img src="media/cap2.jpg" alt="cap2" class="box" id="16">
+      <img src="media/bowtie.jpg" alt="bowtie" class="box" id="17">
+      <img src="media/shoes2.png" alt="shoes2" class="box" id="18">
+      <img src="media/shoes3.png" alt="shoes2" class="box" id="19">
+      <img src="media/nose.png" alt="shoes2" class="box" id="20">
+      <img src="media/nose2.png" alt="shoes2" class="box" id="21">
+      <img src="media/hat.png" alt="shoes2" class="box" id="22">
+      <img src="media/eyebrows.png" alt="shoes2" class="box" id="23">
+      <img src="media/mustache3.png" alt=mustache3 class="box" id="24">
+    </main>
+  </div>
+  <section id="gameArea1"></section>
+  <section id="gameArea2"></section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="potato.js"></script>
+</body>
+
+</html>

@@ -18,7 +18,7 @@
 
         get total() {
             let t = 0;
-            this.items.forEach(i => t += (i.price * i.quantity));
+            if (this.items) { this.items.forEach(i => t += (i.price * i.quantity)); }
             return t;
         }
 

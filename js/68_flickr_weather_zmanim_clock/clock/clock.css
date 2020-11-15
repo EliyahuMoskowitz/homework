@@ -1,0 +1,66 @@
+body{
+    background-color: mediumspringgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#alarm{
+    font-size: 2rem;
+    color: magenta;
+    background-color: maroon;
+    border: 10px solid yellow;
+    border-radius: 25%;
+}
+#alarmClock{
+    min-height: 200px;
+}
+#time{
+    color: midnightblue;
+    font-size: 3rem;
+    margin-bottom: 17px;
+}
+#alarmMSG{
+    color: mintcream;
+    background-color: orangered;
+    font-family: monospace;
+    padding: 15px;
+    width: 100px;
+    min-width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem 1rem 0;
+}
+.delSn{
+    color: white;
+    background-color: black;
+    margin: 1rem;
+}
+#stopwatch{
+    color: teal;
+    background-color: yellow;
+    font-size: 3rem;
+    margin: auto;
+    border: 10px solid blue;
+    border-radius: 5%;
+    width: fit-content;
+    padding: 2rem;
+    padding-top: 0;
+    margin-top: 1rem;
+    text-align: center;
+    grid-column: 2;
+}
+.watchButtons{
+    color: wheat;
+    background-color: black;
+    margin: 10px;
+}
+p{
+    color: red;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: fantasy;
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+}

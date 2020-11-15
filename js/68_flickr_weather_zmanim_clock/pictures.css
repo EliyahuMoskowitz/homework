@@ -1,0 +1,92 @@
+body{
+    background-color: turquoise;
+    /* background-image: url('images/waterfall.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+header{
+    background-color: brown;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+}
+#button, #tagName{
+    font-weight: bold;
+    background-color: yellow;
+    color: teal;
+    border: 4px solid wheat;
+    border-radius: 10%;
+    padding: 0.4rem;
+    margin: 0.5em;
+}
+.options{
+    color: darkmagenta;
+    background-color: darkorange;
+    font-family: monospace;
+    padding: 0.35rem;
+    border: 5px dashed pink;
+}
+
+#button{
+    background-image: url('images/search.jpg');
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 25px;
+}
+#all{
+    margin: 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 50px;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+section{
+    color: magenta;
+    font-family: Impact, fantasy;
+    margin-top: 1rem;
+    max-width: 100%;
+    height: 25%;
+    text-align: center;
+    overflow: auto;
+}
+img{
+    width: 100%;
+    height: 75%;
+    border: 10px solid salmon;
+}
+.allPixDiv{
+    height: 250px;
+    width: 100%;
+}
+
+.carousel{
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+.carousel div img{
+    height: 400px;
+}
+
+ #previous{
+    padding-left: 79%;
+} 
+
+.nextPrevious{
+   border: none;
+   height: 50px;
+   width: 50px;
+   grid-row: 2;
+} 

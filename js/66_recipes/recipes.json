@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Pizza",
+        "ingredients": ["White Bread", "Tomato Sauce", "Oregano", "Mozzarella Cheese"],
+        "url": "https://feelingfoodish.com/wp-content/uploads/2012/08/New-York-Style-pizza.jpg"
+    },
+    {
+        "name": "Salmon",
+        "ingredients": ["Alaskan Salmon", "Garlic", "Teriyaki Sauce", "Lemon Juice"],
+        "url": "https://www.foodiecrush.com/wp-content/uploads/2019/05/Grilled-Salmon-foodiecrush.com-023-683x1024.jpg"
+    },
+    {
+        "name": "Burger",
+        "ingredients": ["Beef", "Honey", "Onion", "BBQ Sauce"],
+        "url": "https://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2011/03/basicburger.jpg"
+    },
+    {
+        "name": "Salad",
+        "ingredients": ["Romaine Lettuce", "Feta Cheese", "Croutons", "Kani"],
+        "url": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Feta-Romaine-Salad_exps37614_SD2847494A02_12_9bC_RMS-696x696.jpg"
+    }
+]

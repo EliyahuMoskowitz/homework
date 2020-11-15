@@ -1,0 +1,23 @@
+body{
+    background-color: greenyellow;
+    /* display: flex; */
+    width: 80%;
+    margin: auto;
+}
+section{
+    color: dodgerblue;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    /* text-decoration: wavy; */
+    font-family: fantasy;
+    font-style: italic;
+}
+img, video{
+    width: 350px;
+    height: 300px;
+    max-width: fit-content;
+}
+div{
+    margin: 1rem;
+}
