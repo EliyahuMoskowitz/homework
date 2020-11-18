@@ -1,0 +1,16 @@
+{
+  "name": "78_recipes",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "recipes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "meeliyahuMoskowitz",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

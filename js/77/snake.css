@@ -4,6 +4,9 @@ body {
   height: 100%;
   margin: 0;
   background-color: lightpink;
+  /* background-image: url('../71_potatoHead/media/waterfall.png');
+  background-repeat: no-repeat;
+  background-size: cover;  */
 }
 .popUp{
 position: absolute;
