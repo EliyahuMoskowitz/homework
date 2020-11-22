@@ -1,10 +1,11 @@
 {
-  "name": "78_recipes",
+  "name": "79_recipes",
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "recipes.js",
+  "main": "./src/index.js",
   "scripts": {
+    "myBuild": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
   }
 }
