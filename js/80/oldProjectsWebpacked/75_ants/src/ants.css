@@ -1,0 +1,66 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.popUp{
+    position: absolute;
+    color: red;
+    /* top: 10px;
+    left: 100px; */
+}
+.controls{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    position: absolute;
+}
+.clear{
+    background-color: yellow;
+    color: blue;
+    border: 7px double orange;
+    border-radius: 15%;
+    padding: 10px;
+    font-family: cursive;
+    font-weight: 700;
+    font-style: italic;
+}
+.clear:hover{
+    background-color: turquoise;
+    color: purple;
+    border: 7px double blue;
+}
+/* #speed{
+    width: 60px;
+    height: 25px;
+    margin-top: 15px;
+} */
+#add, #addFood{
+    background-color: blue;
+    color: yellow;
+    border: 10px solid turquoise;
+    border-radius: 25%;
+    padding: 10px;
+    font-family: cursive;
+    font-weight: 700;
+    font-style: italic;
+}
+#add:hover, #addFood:hover{
+    background-color: yellow;
+    color: blue;
+    border: 10px solid purple;
+}
+#home{
+    position: absolute;
+    top: 50px;
+    left: 1050px;
+    border: dashed 15px blue;
+    background-color: yellow;
+    color: purple;
+    border-radius: 25%;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    /* height: 200px; */
+}

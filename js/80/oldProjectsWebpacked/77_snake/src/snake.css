@@ -1,0 +1,31 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: lightpink;
+  /* background-image: url('../71_potatoHead/media/waterfall.png');
+  background-repeat: no-repeat;
+  background-size: cover;  */
+}
+.popUp{
+position: absolute;
+color: red;
+font-family: cursive;
+font-size: 5rem;
+font-weight: 900;
+font-style: italic;
+text-align: center;
+}
+.restart{
+    display: block;
+    color:  blue;
+    font-size: 2rem;
+    font-family: monospace;
+    font-weight: 800;
+    background-color: chartreuse;
+    border: 10px brown solid;
+    border-radius: 30%;
+    padding: 20px;
+    margin-left: 40%;
+}

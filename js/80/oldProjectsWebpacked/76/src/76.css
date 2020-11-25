@@ -1,0 +1,55 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+}
+.display{
+    border: 20px double hotpink;
+    border-radius: 25%;
+    text-align: center;
+    padding: 10px;
+    color: crimson;
+    background-color: lightpink;
+    font-family: fantasy;
+    font-size: 2rem;
+    height: fit-content;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+    /* align-items: stretch;
+    justify-content: space-between; */
+}
+.s1{
+    color: purple;
+    font-family: fantasy;
+    font-style: italic;
+}
+.s2{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.s3{
+    color: darkblue;
+    background-color: lightseagreen;
+    width: fit-content;
+    margin: auto;
+    font-family: cursive;
+}
+.m1{
+    color: darkcyan;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.m2{
+    color: darkgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.m3{
+    color: darkorange;
+    font-family: cursive;
+}
+.m4_total{
+    text-transform: uppercase;
+    color: deeppink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', fantasy;
+}
