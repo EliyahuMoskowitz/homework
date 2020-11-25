@@ -101,7 +101,7 @@
                     gameOver = true;
                     const over = document.createElement('div'); over.innerHTML = `GAME OVER!!<br/>You have earned ${this.score} points`; over.className = 'popUp';
                     over.style.top = `${canvas.height / 3}px`; over.style.left = `${canvas.width / 5}px`;
-                    const restart = document.createElement('button'); restart.innerHTML = `RESART`; restart.className = 'restart';
+                    const restart = document.createElement('button'); restart.innerHTML = `RESTART`; restart.className = 'restart';
                     restart.addEventListener('click', () => { document.body.removeChild(over); gameOver = false; startGame() });
                     over.appendChild(restart); document.body.appendChild(over);
                     //context.clearRect(0, 0, canvas.width, canvas.height);
