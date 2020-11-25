@@ -26,7 +26,7 @@ $('#clear').on('click', () => {
 
 function showRecipe(find) {
 
-    fetch('./recipes.json')
+    fetch('../src/recipes.json')
         .then(r => {
             if (!r.ok) {
                 throw new Error(`Sorry! You got a ${r.status} which means ${r.statusText}`);
