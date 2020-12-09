@@ -1,0 +1,80 @@
+body{
+    width: 75%;
+    margin: auto;
+    background-color: lightgreen;
+}
+#theCanvas{
+    width: 100%;
+    height: 100%;
+    border:  50px solid red;
+}
+#budgetSetter{
+    display: flex;
+    justify-content: space-evenly;
+}
+#budgetDetails{
+    display: none;
+    color: red;
+    font-style: italic;
+    text-align: center;
+}
+input{
+    border: pink 10px double;
+    border-radius: 20%;
+    text-align: center;
+}
+#budget{
+    background-color: gold;
+    color: fuchsia;
+    font-weight: bold;
+    font-family: fantasy;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: green 10px dashed;
+    border-radius: 20%;
+}
+#profitLoss{
+    color: indigo;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+}
+#diff{
+    color: hotpink;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+#hideButton{
+    background-color: yellow;
+    color: blue;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+#restart{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: blue;
+    color: yellow;
+    font-family: monospace;
+    font-size: 1.5rem;
+    border: none;
+    padding: 15px;
+}
+#wonLostDiv{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 500px;
+    height: 250px;
+    background-color: yellow;
+    color: blue;
+    font-family: fantasy;
+    font-size: 2rem;
+    text-align: center;
+}
+#wonLostDiv > span{
+    color: red;
+}
