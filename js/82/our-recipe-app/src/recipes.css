@@ -1,0 +1,18 @@
+#recipeDetailsName{
+    color: hotpink;
+    font-family: fantasy;
+}
+
+#instructions{
+    color: blue;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+#recipeName{
+    color: orange;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25rem;
+    /* margin-bottom: 20px; */
+}
