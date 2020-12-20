@@ -2,19 +2,19 @@ import './recipes.css';
 import React from 'react';
 
 export default function RecipeDetails(props) {
+    const { name, instructions, ingridients, logo } = props.recipe;
+
     return (
         <>
             <h1>RECIPE DETAILS</h1>
-            <h2 id="recipeDetailsName">{props.recipe.name}</h2>
-            <div id="instructions">{props.recipe.instructions}
-                {console.log(typeof props.recipe.ingridients, props.recipe.ingridients)}
+            <h2 id="recipeDetailsName">{name}</h2>
+            <div id="instructions">{instructions}
+                {console.log(typeof ingridients, ingridients)}
             </div>
-            <div>{props.recipe.ingridients.forEach(ing => {
-                return <span> {ing} </span>
-            })}</div>
+            <div>{ingridients.map((ing, index) => <span key={index}> {ing} </span>)}</div>
 
-            {/* <div>{props.recipe.ingridients[0]}</div> */}
-            <img src={props.recipe.logo} alt={props.recipe.name} />
+            {/* <div>{ingridients[0]}</div> */}
+            <img src={logo} alt={name} />
         </>
     )
 
