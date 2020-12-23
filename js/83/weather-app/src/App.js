@@ -9,7 +9,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       weatherDetails: null,
-      errorMessage: null
+      errorMessage: null,
+      isMsgBoxOpen: false
     }
   }
 
@@ -29,10 +30,26 @@ export default class App extends Component {
       })
       .then(weather => {
         console.log(weather, this);
-        this.setState({ weatherDetails: weather, errorMessage: null });
+        this.setState({
+          weatherDetails: {
+            name: weather.name,
+            temp: weather.main.temp,
+            humidity: weather.main.humidity,
+            feel: weather.main.feels_like,
+            description: weather.weather[0].description,
+            imgSrc: `http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`
+          }, errorMessage: null, isMsgBoxOpen: false
+        });
+        console.log(this.state.weatherDetails);
       })
-      .catch(error => this.setState({ errorMessage: error.toString(), weatherDetails: null }));
+      .catch(error => this.setState({ errorMessage: error.toString(), weatherDetails: null, isMsgBoxOpen: true }));
   }
+
+  openCloseMsgBox = () => {
+    this.setState({
+      isMsgBoxOpen: false/*!this.state.openCloseMsgBox*/
+    });
+  };
 
   render() {
     return (
@@ -42,7 +59,7 @@ export default class App extends Component {
           onBlur={this.getWeather} />
 
         {this.state.weatherDetails ? <Weather weather={this.state.weatherDetails} /> : null}
-        {this.state.errorMessage ? <MessageBox msg={this.state.errorMessage} /> : null}
+        {this.state.errorMessage && this.state.isMsgBoxOpen ? <MessageBox msg={this.state.errorMessage} closeBox={this.openCloseMsgBox} /> : null}
         {/* <MessageBox msg={this.state.errorMessage} /> */}
 
         <p id="status"></p>

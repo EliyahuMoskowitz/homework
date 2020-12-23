@@ -27,20 +27,36 @@ class App extends Component {
         // logo: 'https://www.foodiecrush.com/wp-content/uploads/2019/05/Grilled-Salmon-foodiecrush.com-023-683x1024.jpg'
         logo: './images/salmon.jpg'
         // logo: salmonImg
+      },
+      {
+        name: 'Burger',
+        id: 3,
+        instructions: 'Heat Grill to 350*` and Fry with Olive Oil and Enjoy with Spicy Mayo!!',
+        ingridients: ["Beef", "Honey", "Onion", "BBQ Sauce"],
+        logo: './images/burger.jpg'
+        // logo: "https://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2011/03/basicburger.jpg"
+      },
+      {
+        name: "Salad",
+        id: 4,
+        instructions: 'Heat Toaster to 175*` for 2 hours and Enjoy with Lemon Juice!!',
+        ingridients: ["Romaine Lettuce", "Feta Cheese", "Croutons", "Kani"],
+        logo: './images/salad.jpg'
+        // logo: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Feta-Romaine-Salad_exps37614_SD2847494A02_12_9bC_RMS-696x696.jpg"
       }],
       CurrentlySelectedRecipe: {
-        id: 1
+        id: null
       }
     }
   }
-  // changeState = e => {
-  //   console.log(e, e.target);
-  //   this.setState({
-  //     CurrentlySelectedRecipe: {
-  //       id: this.state.recipes.find(r => r.name === e.taregt.innerText).id
-  //     }
-  //   })
-  // };
+  changeSelectedRecipe = ({ target: { innerText: text } }) => {
+    console.log(text);
+    this.setState({
+      CurrentlySelectedRecipe: {
+        id: this.state.recipes.find(r => r.name === text).id
+      }
+    })
+  };
 
   getRecipe() {
     return this.state.recipes.find(r => r.id === this.state.CurrentlySelectedRecipe.id);
@@ -63,16 +79,21 @@ class App extends Component {
             Click Here to Learn React
           </a>
         </header>
-        <h2 id="chooseList">Please Choose from a List of Recipes</h2>
-        {this.state.recipes.map(r => <Recipe recipeName={r.name} key={r.id} /*onClick={this.changeState.bind(this)}*/ />)}
-        {/* <Recipe /> */}
 
-        {/* <RecipeDetails recipe={this.state.recipes.find(r => r.id === this.state.CurrentlySelectedRecipe.id)} /> */}
+        <section id="sectionRecipes">
+          <aside id="side">
+            <h2 id="chooseList">Please Choose from a List of Recipes</h2>
+            {this.state.recipes.map(r => <Recipe recipeName={r.name} key={r.id} clickHandler={this.changeSelectedRecipe} />)}
+            {/* <Recipe /> */}
+          </aside>
 
-        {/* {this.state.CurrentlySelectedRecipe.id > 0 ? <RecipeDetails recipe={this.getRecipe()} /> : null} */}
+          {/* <RecipeDetails recipe={this.state.recipes.find(r => r.id === this.state.CurrentlySelectedRecipe.id)} /> */}
+          <main id="mainDetails">
+            {this.state.CurrentlySelectedRecipe.id ? <RecipeDetails recipe={this.getRecipe()} /> : null}
 
-        <RecipeDetails recipe={this.getRecipe()} />
-
+            {/* <RecipeDetails recipe={this.getRecipe()} /> */}
+          </main>
+        </section>
       </div>
     );
   }

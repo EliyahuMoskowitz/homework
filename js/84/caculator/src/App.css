@@ -1,0 +1,40 @@
+/* .App{
+  width: 70%;
+  margin: auto;
+  /* text-align: center; */
+/* }  */
+.App > button{
+  color: blue ;
+  background-color: aqua;
+  border: 15px double purple;
+  border-radius: 10%;
+  padding: 15px;
+  margin: 15px;
+  font-size: 2rem;
+}
+.App > button:hover{
+  color: aqua;
+  background-color: blue;
+  border-color: yellow;
+}
+.App > button:last-child{
+  color: aqua;
+  background-color: blue;
+  border-color: yellow;
+}
+.App > button:last-child:hover{
+  color: blue ;
+  background-color: aqua;
+  border-color: purple;
+}
+
+.App > main{
+  color: blue ;
+  background-color: aqua;
+  border: 15px double purple;
+  border-radius: 10%;
+  padding: 15px;
+  margin: 15px;
+  font-size: 2rem;
+  font-family: fantasy;
+}

@@ -11,7 +11,7 @@ export default function RecipeDetails(props) {
             <div id="instructions">{instructions}
                 {console.log(typeof ingridients, ingridients)}
             </div>
-            <div>{ingridients.map((ing, index) => <span key={index}> {ing} </span>)}</div>
+            <div id="ingridients">{ingridients.map((ing, index) => <span key={index}> {ing} </span>)}</div>
 
             {/* <div>{ingridients[0]}</div> */}
             <img src={logo} alt={name} />
