@@ -3,6 +3,7 @@ import MessageBox from './MessageBox';
 import Weather from './Weather';
 // import Location from './Locator';
 import './App.css';
+import ZipInput from './ZipInput';
 
 export default class App extends Component {
   constructor(props) {
@@ -55,8 +56,10 @@ export default class App extends Component {
     return (
       <div className="App">
 
-        <input placeholder="Zip"//{/*or Current Location(Default)*/}
-          onBlur={this.getWeather} />
+        {/* <input placeholder="Zip"//{or Current Location(Default)}
+          onBlur={this.getWeather} /> */}
+
+        <ZipInput getTheWeather={this.getWeather} />
 
         {this.state.weatherDetails ? <Weather weather={this.state.weatherDetails} /> : null}
         {this.state.errorMessage && this.state.isMsgBoxOpen ? <MessageBox msg={this.state.errorMessage} closeBox={this.openCloseMsgBox} /> : null}
