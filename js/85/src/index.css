@@ -1,7 +1,0 @@
-#blogDiv{
-    width: 75%;
-    margin: auto;
-    background-color: yellow;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
