@@ -1,0 +1,30 @@
+#recipeDetailsName{
+    color: hotpink;
+    font-family: fantasy;
+}
+
+#instructions{
+    color: blue;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+#recipeName{
+    color: orange;
+    background-color: turquoise;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 10px;
+    padding: 20px;
+}
+#ingridients{
+    color: teal;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img{
+    width: 50%;
+    height: 450px;
+}

@@ -1,0 +1,16 @@
+#chooseList{
+  color: brown;
+  font-family: cursive;
+}
+
+#sectionRecipes{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15%;
+}
+#side{
+  grid-column: 1;
+}
+#mainDetails{
+  grid-column: 2;
+}
