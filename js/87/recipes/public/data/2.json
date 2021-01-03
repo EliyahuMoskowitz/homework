@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "name": "steak",
+  "ingredients": [
+    "steak",
+    "barbeque sauce"
+  ],
+  "directions": [
+    "marinate steak",
+    "grill for 8 minutes"
+  ],
+  "picture": "https://www.omahasteaks.com/gifs/990x594/prfm7a.jpg"
+}

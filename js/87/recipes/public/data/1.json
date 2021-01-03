@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "name": "hard boiled eggs",
+  "ingredients": [
+    "eggs",
+    "water",
+    "salt"
+  ],
+  "directions": [
+    "boil water",
+    "add eggs",
+    "salt to taste"
+  ],
+  "picture": "https://hips.hearstapps.com/delish/assets/18/08/1519321899-hard-boiled-eggs-horizontal.jpg"
+}

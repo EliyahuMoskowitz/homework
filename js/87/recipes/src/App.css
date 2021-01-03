@@ -1,0 +1,8 @@
+.active{
+    color: aqua;
+    text-decoration: blue;
+}
+.active:hover{
+    color: red;
+    text-decoration: aqua;
+}
