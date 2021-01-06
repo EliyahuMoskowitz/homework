@@ -1,61 +1,76 @@
 import './RecipeDetails.css';
-import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react'
 import BulletLessList from './BulletLessList';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+
+class RecipeDetails extends Component {
+  state = {
+    imageShowing: true
+  };
+
+  componentDidMount() {
+    this.loadRecipe();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params.recipeId !== this.props.match.params.recipeId) {
+      this.loadRecipe();
+    }
+  }
+
+  async loadRecipe() {
+    const { match: { params: { recipeId } } } = this.props;
+    try {
+      const response = await fetch(`/data/${recipeId}.json`);
+      if (!response.ok) {
+        throw new Error(`${response.status}: ${response.statusText}`);
+      }
+      const recipe = await response.json();
+      this.setState({
+        recipe: recipe
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
 
- /* if getting state, not Ajax */
 
-export default function RecipeDetails ({recipe: rec, recipeArray}) {
-  const [recipe, setRecipe] = useState(rec); 
-  const [{imageShowing}, setImage] = useState({imageShowing: true});
-  // let {imageShowing} = state;
-
-//   let {recipeId} = useParams();
-
-  useEffect(() => {
-          //separate states for different variables
-      setRecipe(recipe);
-      // setState({       //if same state for all
-      //   ...state,
-      //   recipe: recipe
-      // });
-}, [recipe]);
-
-  const togglePicture = () => {
-    setImage({
-      imageShowing: !imageShowing
+  togglePicture = () => {
+    this.setState({
+      imageShowing: !this.state.imageShowing
     });
   }
 
-  function getPictureElem(picture, name) {
-    /*return imageShowing ?
+  getPictureElem(picture, name) {
+    /*return this.state.imageShowing ?
       <img className="img-fluid img-thumbnail img" src={picture} alt={name} /> :
       null;*/
-    if (imageShowing) {
+    if (this.state.imageShowing) {
       return <img className="img-fluid img-thumbnail img" src={picture} alt={name} />
     }
     return null;
   }
 
-    if (! recipe) {
+  render() {
+    if (!this.state.recipe) {
       return null;
     }
 
-    const { name, ingredients, directions, picture } = recipe;
+    const { name, ingredients, directions, picture } = this.state.recipe;
 
-    /*const pictureElem = imageShowing ?
+    /*const pictureElem = this.state.imageShowing ?
       <img className="img-fluid img-thumbnail img" src={picture} alt={name} /> :
       null;*/
 
-    const text = imageShowing ? 'hide' : 'show';
+    const text = this.state.imageShowing ? 'hide' : 'show';
 
     return (
       <div>
         <h2>{name}</h2>
-        {/*pictureElem*/getPictureElem(picture, name)}
+        {/*pictureElem*/this.getPictureElem(picture, name)}
         <br />
-        <button onClick={togglePicture}>
+        <button onClick={this.togglePicture}>
           {text} picture
         </button>
         <h3>ingredients</h3>
@@ -63,11 +78,11 @@ export default function RecipeDetails ({recipe: rec, recipeArray}) {
         <h3>directions</h3>
         <BulletLessList list={directions} />
 
-        <p style={{color: 'purple', fontFamily: 'fantasy'}}>Navigate to other Recipes</p>
-        {recipeArray.map(recipe => (
-          <li className="bulletlessList" key={recipe.id}>
-            <Link to={`/recipe/${recipe.id}`} onClick={() => setRecipe(recipe)}>{recipe.name}</Link>
-          </li>))}
+        <Link to='/recipe/1'>Recipe 1</Link>
       </div>
     )
   }
+}
+
+// component will now get match, location, history as props
+export default withRouter(RecipeDetails)

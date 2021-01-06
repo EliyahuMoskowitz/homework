@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import RecipeDetails from './RecipeDetails2';
+import RecipeDetails from './RecipeDetails3';
 // import BulletLessList from './BulletLessList';
 import ClickCounter from './ClickCounter';
 import RecipeList from './RecipeList3';

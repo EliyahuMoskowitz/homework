@@ -1,0 +1,125 @@
+body{
+  background-color: yellow !important;
+}
+#blogDiv{
+  width: 75%;
+  margin: auto;
+  background-color: rgb(0, 255, 55);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+.aBlog{
+  color: blue;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px;
+  border: 5px solid purple;
+  border-radius: 5%;
+}
+.aBlog:hover{
+  color: purple;
+  background-color: yellow;
+  border-color: blue;
+  /* padding: 10px; */
+}
+.aBlog > div:first-child{
+  color: hotpink;
+  font-size: 1.5rem;
+}
+.aBlog > div:nth-child(2){
+  color: red;
+  font-size: 1.1rem;
+}
+#msgDiv{
+  color: blueviolet;
+  font-family: fantasy;
+  position: fixed;
+  top: 40%;
+  left: 35%;
+}
+#thePost{
+  color: red;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding: 10px;
+  overflow-y: auto;
+  height: 200px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+#thePost > aside {
+  color: royalblue;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+#backButton{
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: blueviolet;
+  background-color: chartreuse;
+  font-style: italic;
+  border: 10px dashed blue;
+  border-radius: 10%;
+  padding: 10px;
+}
+#backButton:hover{
+  color: chartreuse;
+  background-color: black ;
+  border-color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#allPosts{
+  background-color: lightpink;
+  color: darkblue;
+  text-align: center;
+  width: 72%;
+  margin: auto;
+  font-family: cursive;
+}
+#ShowComments{
+  color: chartreuse;
+  background-color: brown ;
+  font-family: fantasy;
+  border: 10px dotted green ;
+  border-radius: 10%;
+  display: block;
+  /* margin-top: 20px ; */
+  width: max-content;
+  margin: auto;
+  /* padding: 10px; */
+}
+#HideComments{
+  color:brown;
+  background-color: chartreuse;
+  font-family: fantasy;
+  border: 10px dotted red ;
+  border-radius: 15%;
+}
+#ShowComments:hover{
+  color:  blueviolet;
+  background-color:  chartreuse;
+  border-color: blue;
+}
+#HideComments:hover{
+  color:  chartreuse;
+  background-color: blueviolet ;
+  border-color: orange;
+}
+
+#title, #post, #name, #email, #comment{
+  color: blueviolet;
+  font-style: italic;
+  font-family: fantasy;
+}
+#commentSection{
+  color: black;
+  font-family: cursive;
+}
+
+a{
+  text-decoration: none;
+}

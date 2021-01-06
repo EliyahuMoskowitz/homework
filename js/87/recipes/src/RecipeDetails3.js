@@ -1,26 +1,34 @@
 import './RecipeDetails.css';
 import React, { useState, useEffect } from 'react';
 import BulletLessList from './BulletLessList';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
-
- /* if getting state, not Ajax */
-
-export default function RecipeDetails ({recipe: rec, recipeArray}) {
-  const [recipe, setRecipe] = useState(rec); 
+export default function RecipeDetails ({recipeArray}) {
+  const [recipe, setRecipe] = useState(); 
   const [{imageShowing}, setImage] = useState({imageShowing: true});
   // let {imageShowing} = state;
 
-//   let {recipeId} = useParams();
+  let {recipeId} = useParams();
 
   useEffect(() => {
+    (async () => {
+    try {
+      const response = await fetch(`/data/${recipeId}.json`);
+      if (!response.ok) {
+        throw new Error(`${response.status}: ${response.statusText}`);
+      }
+      const recipe = await response.json();
           //separate states for different variables
       setRecipe(recipe);
       // setState({       //if same state for all
       //   ...state,
       //   recipe: recipe
       // });
-}, [recipe]);
+    } catch (err) {
+      console.error(err);
+    }
+  })()
+}, [recipeId]);
 
   const togglePicture = () => {
     setImage({
@@ -66,7 +74,7 @@ export default function RecipeDetails ({recipe: rec, recipeArray}) {
         <p style={{color: 'purple', fontFamily: 'fantasy'}}>Navigate to other Recipes</p>
         {recipeArray.map(recipe => (
           <li className="bulletlessList" key={recipe.id}>
-            <Link to={`/recipe/${recipe.id}`} onClick={() => setRecipe(recipe)}>{recipe.name}</Link>
+            <Link to={`/recipe/${recipe.id}`}>{recipe.name}</Link>
           </li>))}
       </div>
     )
