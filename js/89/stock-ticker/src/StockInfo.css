@@ -1,0 +1,7 @@
+#compInfo > h1{
+    color: indigo;
+}
+#compInfo > p{
+    color: purple;
+    font-family: cursive;
+}

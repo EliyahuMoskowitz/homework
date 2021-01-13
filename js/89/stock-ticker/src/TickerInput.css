@@ -1,0 +1,33 @@
+/* #enterSymbol{
+
+}
+#symbolInput{
+
+} */
+aside{
+    user-select: none;
+}
+label{
+    color: teal;
+    font-family: fantasy;
+}
+input{
+    background-color: wheat;
+    /* color: white; */
+    border: 10px solid red;
+    border-radius: 10%;
+    padding: 10px;
+    width: 200px;
+    margin: 20px;
+}
+a{
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: indigo;
+}

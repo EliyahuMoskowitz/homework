@@ -1,0 +1,10 @@
+<p>item {{numItem}} works!</p>
+<h2>{{item.name}}</h2>
+
+<ng-container *ngIf="!item.price.toString().split('.')[1]; else second"><h2>${{item.price}}.00</h2></ng-container>
+<ng-template #second>
+    <ng-container *ngIf="item.price.toString().split('.')[1].length > 1; else third"><h2>${{item.price}}</h2></ng-container>
+</ng-template>
+<ng-template #third><h2>${{item.price}}0</h2></ng-template>
+
+<h2>{{item.weight}}</h2>
