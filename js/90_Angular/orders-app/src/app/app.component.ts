@@ -23,7 +23,7 @@ export class AppComponent {
         zip: '18701'
       }
     },
-    date: '12/24/2021',
+    date: new Date(),
     items: [{name: 'Pizza', price: 5, weight: '16oz'}, {name: 'Salmon', price: 25.5, weight: '48oz'}]
   };
 }

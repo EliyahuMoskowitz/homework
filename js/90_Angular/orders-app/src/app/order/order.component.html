@@ -1,5 +1,5 @@
 <p>order works!</p>
-<span class="date">{{order.date}}</span>
+<span class="date">{{order.date | date: "short"}}</span>
 <app-person [person]="order.person"></app-person>
 <div *ngFor="let item of order.items">
 

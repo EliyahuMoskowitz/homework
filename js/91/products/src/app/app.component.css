@@ -1,0 +1,57 @@
+h1{
+    color: aqua;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+select{
+    background-color: fuchsia;
+    color: blue;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 25%;
+    text-transform: capitalize;
+}
+
+#noCats{
+  text-transform: capitalize;
+  color: aqua;
+  font-family: cursive;
+}
+#deletingCat{
+  /* position: absolute;
+  top: 40%;
+  left: 40%; */
+  color: rgb(241, 198, 23);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+  background-color: crimson;
+  border: 2.5px dotted rgb(241, 198, 23);
+  border-radius: 5%;
+  width: 400px;
+  margin: auto;
+  text-transform: capitalize;
+  max-height: 270px;
+  overflow-y: auto;
+}
+#deletingCat > h3{
+  color: white;
+  font-family: cursive;
+}
+#deletingCat > section:hover{
+  color: black;
+  cursor: pointer;
+}
+
+
+/* input, button{
+    color: chartreuse;
+    background-color: orange;
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+} */

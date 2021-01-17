@@ -1,0 +1,27 @@
+aside{
+    text-transform: capitalize;
+    color: yellow;
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+h1{
+    text-transform: capitalize;
+    color: gold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul{
+    background-color: teal;
+    border: 10px double dodgerblue;
+    border-radius: 50%;
+    padding: 25px;
+    width: fit-content;
+    margin: auto;
+}
+
+/* input, button{
+    color: chartreuse;
+    background-color: orange;
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+} */

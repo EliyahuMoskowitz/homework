@@ -1,0 +1,20 @@
+<h1>{{ category.name }}</h1>
+
+<!-- <ng-container *ngIf="category.items?.length; else emptyMsg">
+    <ul >
+    <app-item *ngFor="let item of category.items" [item]="item" ></app-item>
+</ul></ng-container> -->
+
+<!-- <input (change)="addItem($event)" /> -->
+<input #theAddInput placeholder="name: price" />
+<button (click)="addItem(theAddInput.value)" >Add Item</button>
+
+<ul *ngIf="category.items?.length">
+    <!-- <app-item *ngFor="let item of category.items" [item]="item" [items]="category.items" [changeItems]="deleteItem()" ></app-item> -->
+    <app-item *ngFor="let item of category.items" [item]="item"
+          (onClose)="deleteItem(item)"  ></app-item>
+</ul>
+
+<aside *ngIf="!category.items?.length" >no items in category</aside>
+
+<!-- <aside #emptyMsg>no items in category</aside> -->

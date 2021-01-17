@@ -1,0 +1,38 @@
+<span>{{ title }} app is running!</span>
+
+<h1>Choose A Category</h1>
+
+<!-- <input (change)="addCategory($event)" /> -->
+<input #theAddInput placeholder="name" />
+<button (click)="addCategory(theAddInput.value)" >Add Category</button><br/>
+
+<!-- <input #theDeleteInput placeholder="name" />
+<button (click)="deleteCategory(theDeleteInput.value)" >Delete Category</button><br>  -->
+
+<!-- <select (change)="setCategory($event)" id="theSelect" > -->
+<select #theSelect (click)="setCategory(theSelect.value)" >
+<!-- <select  > -->
+<!-- <select #theSelect (ngModel)="category" > -->
+<!-- <select [(ngModel)]="category" > -->
+  <!-- <app-category *ngFor="let category of categories" [category]="category" ></app-category> -->
+  <option *ngFor="let category of categories; let i = index" >
+    {{ category.name }} {{i + 1}}</option>
+</select>
+
+<br>
+<button (click)="deleteCategory(null, false)" >Delete Category</button><br>
+<!-- <button (click)="deleteCategory(category)" >Delete Category</button><br> -->
+<!-- <button (click)="deleteCategory(category.name)" >Delete Category</button><br>  -->
+
+<div *ngIf="choosingCategory" id="deletingCat">
+  <h3 *ngIf="categories.length">which categeory would you like to delete?
+    <br><button (click)="deleteCategory(null, true)">delete all</button>
+  </h3>
+  <h3 *ngIf="!categories.length">no categories here, sorry!</h3>
+  <section #theDeleted *ngFor="let category of categories; let i = index" (click)="deleteCategory(theDeleted.innerText, false)" >
+      {{category.name}} {{i + 1}}</section>
+</div>
+
+
+<app-category *ngIf="category" [category]="category" ></app-category>
+<h3 id="noCats" *ngIf="!category" >no categories here</h3>

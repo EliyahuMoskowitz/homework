@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    background-color: darkmagenta;
+    margin-top: 50px;
+}
+body{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    background-color: blue;
+    border-radius: 50%;
+}
+input, button{
+    color: chartreuse;
+    background-color: orange;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
