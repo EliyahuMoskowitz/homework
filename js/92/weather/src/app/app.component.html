@@ -1,0 +1,17 @@
+<!-- <span>{{title}} works!</span> -->
+
+<input #zipInput placeholder="Enter Zip" (change)="setZip(zipInput.value)" [value]="zip" />
+<!-- <input #zipInput placeholder="Enter Zip" [(ngModel)]="zip" />      will do input event; we need change -->
+<!-- <input #zipInput placeholder="Enter Zip" [(ng-change)]="zip" /> -->
+
+<button id="findMe"  >Find My Location</button>
+  <p id="status"></p>
+
+  <!-- (locationFound)="setLocationFound($event)" -->
+<app-locator (position)="setPosition($event)" ></app-locator>
+
+<app-weather *ngIf="zip || position" [zip]="zip" [position]="position"></app-weather>
+
+<app-map-link *ngIf="position" [position]="position" ></app-map-link>
+
+<router-outlet></router-outlet>

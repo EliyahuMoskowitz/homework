@@ -1,0 +1,9 @@
+<!-- <p>map-link works!</p> -->
+
+<div *ngIf="position">
+  <a id="mapLink" target="_blank" href="https://www.openstreetmap.org/#map=18/{{position.latitude}}/{{position.longitude}}">
+    Show Where you are on Map  </a>
+
+    <aside>You are Located at the follwing coordiantes:
+    <br/>Latitude: {{position.latitude.toFixed(2)}} °, Longitude: {{position.longitude.toFixed(2)}} °</aside>
+</div>

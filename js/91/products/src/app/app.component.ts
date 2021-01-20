@@ -13,8 +13,8 @@ export class AppComponent {
   setCategory(value /*index: number*/ /* {target: {value}} */){
     // console.log(index);
     // this.category = this.categories.find(c => c.name === value);
-    let index: number = +value[value.length - 1] -1;
-    this.category = this.categories.find((c,i) => i === index);
+    // let index: number = +value[value.length - 1] -1;   //if option has no [value], and we are getting the inputed string
+    this.category = this.categories.find((c,i) => i === +value /*index*/);
   }
 
   categories: Category[] = [
@@ -71,6 +71,10 @@ export class AppComponent {
     },{name: 'Cakes', items: []}
   ];
   category: Category = this.categories[0];
+  // for ngModel
+  // catNumber: string;
+  // category: Category = this.categories.find((c, i) => i === +this.catNumber) || this.categories[0];
+  // category: Category = this.categories.find(c => c.name === this.catName) || this.categories[0];
 
   addCategory(value: string  /*{target: {value}}*/ ){
     this.categories.push({name: value/*.charAt(0).toUpperCase()*/ || 'Unknown', items: []});
@@ -83,7 +87,7 @@ export class AppComponent {
     if(this.choosingCategory) {
       if (all) {
         this.categories = [];
-      } else {
+      } else if(category) {
         let index: number = +category[category.length - 1] -1;
     // let theCat = this.categories.find(c => c.name === category);
     // let index = this.categories.indexOf(theCat);

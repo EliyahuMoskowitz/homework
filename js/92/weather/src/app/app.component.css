@@ -1,0 +1,22 @@
+#findMe{
+  color: aqua;
+  background-color: black;
+  border: 5px solid salmon;
+  border-radius: 5%;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#findMe:hover, #find-me:focus{
+  color: grey;
+  background-color: aqua;
+  border: 5px solid blue;
+}
+
+#status{
+  color: blueviolet;
+  font-size: 1.25rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+

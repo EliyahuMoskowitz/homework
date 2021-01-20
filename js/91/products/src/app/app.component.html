@@ -11,12 +11,10 @@
 
 <!-- <select (change)="setCategory($event)" id="theSelect" > -->
 <select #theSelect (click)="setCategory(theSelect.value)" >
-<!-- <select  > -->
-<!-- <select #theSelect (ngModel)="category" > -->
-<!-- <select [(ngModel)]="category" > -->
+<!-- <select [(ngModel)]="catNumber" > -->
   <!-- <app-category *ngFor="let category of categories" [category]="category" ></app-category> -->
-  <option *ngFor="let category of categories; let i = index" >
-    {{ category.name }} {{i + 1}}</option>
+  <option *ngFor="let category of categories; let i = index" [value]="i" >
+    {{ category.name }} {{i + 1}} </option>
 </select>
 
 <br>

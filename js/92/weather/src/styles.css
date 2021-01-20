@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  background-color: khaki;
+}
+
+input{
+  /* display: block; */
+  margin: auto;
+  background-color: aquamarine;
+  border: 5px solid gold;
+  border-radius: 15%;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+

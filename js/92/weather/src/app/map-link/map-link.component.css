@@ -1,0 +1,18 @@
+#mapLink{
+  color: orange;
+  font-size: 1.5rem;
+  padding-bottom: 10rem;
+  text-decoration: none;
+}
+#mapLink:hover{
+  color: rgb(128, 0, 122);
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+aside{
+  color: rgb(235, 27, 27);
+  font-size: 2rem;
+  font-family: cursive;
+}

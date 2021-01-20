@@ -1,0 +1,19 @@
+#name{
+  color: indigo;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: fantasy;
+}
+
+section{
+  color: green;
+  font-size: 2rem;
+  font-family: cursive;
+  text-transform: capitalize;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+}
