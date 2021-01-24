@@ -1,0 +1,25 @@
+<app-back-button></app-back-button>
+
+<header>
+  <button (click)="setDisplay()" >display {{displayText}}</button>
+  <h2 style="text-align: center; color: green" >{{title}}'s Blog</h2>
+</header>
+  <!-- to get all with async -->
+  <ng-container *ngIf="displayAll; else three" >
+    <app-post *ngFor="let post of (allPosts | async)" [post]="post" ></app-post>
+  </ng-container >
+
+  <!-- to go through 3 at a time -->
+  <ng-template #three >
+<section>
+  <button (click)="previous()" >&laquo;</button>
+
+<main>
+  <ng-container *ngFor="let post of posts; let i = index" >
+    <app-post *ngIf="i >= lowest && i <= greatest" [post]="post" ></app-post>
+  </ng-container >
+</main>
+
+  <button (click)="next()" >&raquo;</button>
+</section>
+</ng-template>

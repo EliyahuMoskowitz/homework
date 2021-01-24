@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    <input id="units" placeholder="Imperial, Metric or Kelvin(Default)" value="IMPERIAL">
+    <input id="zip" placeholder="Enter Zip" value="">
+    <!-- <input id="units" placeholder="Imperial, Metric or Kelvin(Default)" value="IMPERIAL"> -->
+    <select name="" id="units">
+        <option value="imperial">Farenheit</option>
+        <option value="metric">Celcius</option>
+        <option value="kelvin">Kelvin</option>
+    </select>
     <button id="find-me">Show My Local Weather</button><br />
     <p id="status"></p>
     <main id="middle"></main>

@@ -1,0 +1,8 @@
+<main class="aBlog" >
+  <a [routerLink]="['/user', user.id]" (click)="setUser()">
+    <div class="text-center">{{user.name}}</div>
+    <div class="text-center text-danger">{{user.website}}</div>
+    <div class="text-center text-dark">Company: <br/>{{user.companyName}}<br/>{{user.catchPhrase}}
+          <br/>{{user.bs}}</div>
+  </a>
+</main>

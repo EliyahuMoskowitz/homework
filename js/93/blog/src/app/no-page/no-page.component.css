@@ -1,0 +1,14 @@
+p{
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+aside{
+  color: green;
+  font-family: fantasy;
+  text-transform: capitalize;
+  text-align: center;
+}

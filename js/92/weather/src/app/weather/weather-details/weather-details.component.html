@@ -1,10 +1,12 @@
 <!-- <p>weather-details works!</p> -->
 
+<!-- <ng-container *ngIf="weather.name; else error"> -->
   <section id="name">{{weather.name}}</section>
-  <section>Tempature: {{weather.temp}} °</section>
-  <section>Real Feel: {{weather.feel}} °</section>
+  <section>Tempature: {{weather.temp}} ° {{units}}</section>
+  <section>Real Feel: {{weather.feel}} ° {{units}}</section>
   <img src="{{weather.imgSrc}}" />
   <section>{{weather.description}}</section>
   <section>Humidity: {{weather.humidity}} %</section>
-
+<!-- </ng-container>
+<ng-template #error><app-error [error]="weather" ></app-error></ng-template> -->
 

@@ -6,17 +6,16 @@ body{
 #find-me{
     color: aqua;
     background-color: black;
-    border: 15px solid salmon;
+    border: 10px solid salmon;
     border-radius: 5%;
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 15px;
     margin-top: 10px;
 }
 #find-me:hover, #find-me:focus{
     color: grey;
     background-color: aqua;
-    border: 15px solid blue;
-    border-radius: 5%;
+    border: 10px solid blue;
 }
 #name{
     color: indigo;
@@ -25,8 +24,8 @@ body{
     font-style: italic;
     font-family: fantasy;
 }
-#units{
-    display: block;
+#units, #zip{
+    /* display: block; */
     margin: auto;
     background-color: aquamarine;
     border: 5px solid gold;

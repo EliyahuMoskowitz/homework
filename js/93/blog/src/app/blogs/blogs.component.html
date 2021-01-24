@@ -1,0 +1,5 @@
+<div id="blogDiv">
+    <ng-container *ngFor="let blog of blogs | async" >
+        <app-user [user]="blog"></app-user>
+    </ng-container >
+</div>

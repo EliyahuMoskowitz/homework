@@ -10,12 +10,17 @@ export class AppComponent implements OnInit {
   title = 'weather';
 
   zip: string | null = '';
+  units = 'imperial';
   // locationFound: boolean;
   position: Position | null;
 
   setZip(zip: string){
     this.zip = zip;
     this.position = null
+  }
+
+  setUnits(units: string){
+    this.units = units;
   }
 
   // setLocationFound(v: boolean){

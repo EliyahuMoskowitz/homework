@@ -1,0 +1,23 @@
+.aBlog{
+  color: blue;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px;
+  border: 5px solid purple;
+  border-radius: 5%;
+}
+.aBlog:hover{
+  color: purple;
+  background-color: yellow;
+  border-color: blue;
+  /* padding: 10px; */
+}
+.aBlog > a > div:first-child{
+  color: hotpink;
+  font-size: 1.5rem;
+}
+.aBlog > a > div:nth-child(2){
+  color: red;
+  font-size: 1.1rem;
+}

@@ -1,9 +1,8 @@
-<!-- <p>weather works!</p> -->
-
-<ng-container *ngIf="weather ">
-  <app-weather-details [weather]="weather" ></app-weather-details>
+<ng-container *ngIf="weather">
+<!-- <ng-container *ngIf="weather | async as weather "> -->
+  <app-weather-details [weather]="weather" [units]="displayUnits" ></app-weather-details>
 </ng-container>
 
-<ng-container *ngIf="error ">
+<ng-container *ngIf="error">
   <app-error [error]="error" ></app-error>
 </ng-container>

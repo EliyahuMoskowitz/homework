@@ -1,0 +1,68 @@
+#thePost{
+  color: red;
+  font-family: 'Trebuchet MS', sans-serif;
+  padding: 10px;
+  overflow-y: auto;
+  height: 200px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+#thePost > aside {
+  color: royalblue;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+#allPosts{
+  background-color: lightpink;
+  color: darkblue;
+  text-align: center;
+  width: 72%;
+  margin: auto;
+  font-family: cursive;
+}
+#ShowComments{
+  color: chartreuse;
+  background-color: brown ;
+  font-family: fantasy;
+  border: 10px dotted green ;
+  border-radius: 10%;
+  display: block;
+  /* margin-top: 20px ; */
+  width: max-content;
+  margin: auto;
+  padding: 7px;
+}
+#HideComments{
+  color:brown;
+  background-color: chartreuse;
+  font-family: fantasy;
+  border: 10px dotted red ;
+  border-radius: 15%;
+  padding: 7px;
+}
+#ShowComments:hover{
+  color:  blueviolet;
+  background-color:  chartreuse;
+  border-color: blue;
+}
+#HideComments:hover{
+  color:  chartreuse;
+  background-color: blueviolet ;
+  border-color: orange;
+}
+
+#title, #post, #name, #email, #comment{
+  color: blueviolet;
+  font-style: italic;
+  font-family: fantasy;
+}
+#commentSection{
+  color: black;
+  font-family: cursive;
+}
+
+a{
+  text-decoration: none;
+}

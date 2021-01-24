@@ -1,0 +1,9 @@
+#name, #email, #comment{
+  color: blueviolet;
+  font-style: italic;
+  font-family: fantasy;
+}
+#commentSection{
+  color: black;
+  font-family: cursive;
+}

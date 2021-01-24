@@ -1,0 +1,8 @@
+<div>
+  <section id="thePost"><span id="title">Title: </span>{{post.title}}<br/><span id="post">Post: </span>
+      <aside>{{post.body}}</aside>
+      <button id="{{text}}Comments" (click)="setCommentsShowing()" >
+          {{text}} Comments</button>
+  <app-get-comments *ngIf="areCommentsShowing" [postId]="post.id"  ></app-get-comments>
+  </section><hr/>
+</div>

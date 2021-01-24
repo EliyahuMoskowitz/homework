@@ -1,0 +1,37 @@
+header > button{
+  color: rgb(43, 205, 226);
+  background-color: rgb(255, 0, 85);
+  font-style: italic;
+  text-transform: capitalize;
+  border: 5px dashed rgb(57, 240, 21);
+  border-radius: 5%;
+  font-size: 1.5rem;
+}
+header > button:hover{
+  color: rgb(226, 43, 73);
+  background-color: rgb(0, 60, 255);
+  border-color: rgb(0, 255, 242);
+}
+
+section{
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+section > button{
+  width: 75px;
+  height: 75px;
+  font-size: 2.5rem;
+  color: teal;
+  background-color: violet;
+  border: turquoise double 10px;
+  border-radius: 50%;
+  /* user-select: none; */
+}
+section > button:hover{
+  color: violet;
+  background-color: teal;
+  border-color: pink;
+}
+
+
