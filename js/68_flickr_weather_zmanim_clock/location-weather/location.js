@@ -41,6 +41,7 @@
     }
 
     function weather(zip) {
+        console.log(zip);
         // document.body.removeChild(locator);
         // document.body.removeChild(unitInput[0]);
         display.empty();
@@ -60,7 +61,6 @@
             })
             .then(weather => { 
                 console.log(weather);
-                showWeather(weather);
                 if(!zip){
                     isZip = false;
                     isLocation = true;
@@ -68,6 +68,7 @@
                     isZip = true;
                     isLocation = false;
                 }
+                showWeather(weather);
              })
             .catch(err => pcs.messageBox.show(err));
     }
@@ -81,13 +82,13 @@
             }
             $('<pre id="name"></pre>').text(e).appendTo(display);
         });
-        // if(isZip){
-        // mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-        // mapLink.target = '_blank'; mapLink.id = 'map-link';
-        // $('<aside></aside>').html(`You are Located at the follwing coordiantes: <br/>Latitude: ${latitude.toFixed(2)} °, Longitude: ${longitude.toFixed(2)} °`).appendTo(display);
-        // mapLink.textContent = 'Show Where you are on Map';
-        // display.append(mapLink);
-        // }
+        if(isLocation){
+        mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+        mapLink.target = '_blank'; mapLink.id = 'map-link';
+        $('<aside></aside>').html(`You are Located at the follwing coordiantes: <br/>Latitude: ${latitude.toFixed(2)} °, Longitude: ${longitude.toFixed(2)} °`).appendTo(display);
+        mapLink.textContent = 'Show Where you are on Map';
+        display.append(mapLink);
+        }
     }
 
     function decideUnits(u) {
