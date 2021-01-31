@@ -7,3 +7,5 @@ export default function ZipInput({ getTheWeather }) {
             onBlur={getTheWeather} />
     );
 }
+
+// this.onSubmit.bind(this)

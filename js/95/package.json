@@ -1,0 +1,16 @@
+{
+  "name": "95",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http-client.js",
+  "dependencies": {
+    "bl": "^4.0.3",
+    "concat-stream": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

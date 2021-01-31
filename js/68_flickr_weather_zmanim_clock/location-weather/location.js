@@ -3,11 +3,16 @@
     'use strict';
 
     let locator = document.querySelector('#find-me'), unitInput = $('#units'), zipInput = $('#zip'),
-        latitude, longitude, typeUnits, units, display = $('#middle');;
+        latitude, longitude, isLocation, isZip, typeUnits, units, display = $('#middle');
     const mapLink = document.createElement('a');
 
     locator.addEventListener('click', geoFindMe);
-    zipInput.on('change', ({target: t}) => weather(t.value))
+    zipInput.on('blur', ({target: t}) => weather(t.value));
+    unitInput.on('change', () => {
+        if(isLocation || isZip){
+            weather(isZip ? zipInput.val() : null);
+        }
+    });
 
     function geoFindMe() {
 
@@ -53,7 +58,17 @@
                 }
                 return r.json();
             })
-            .then(weather => { console.log(weather); showWeather(weather); })
+            .then(weather => { 
+                console.log(weather);
+                showWeather(weather);
+                if(!zip){
+                    isZip = false;
+                    isLocation = true;
+                }else{
+                    isZip = true;
+                    isLocation = false;
+                }
+             })
             .catch(err => pcs.messageBox.show(err));
     }
     function showWeather(weatherData) {
@@ -66,13 +81,13 @@
             }
             $('<pre id="name"></pre>').text(e).appendTo(display);
         });
-        if(!zip){
-        mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-        mapLink.target = '_blank'; mapLink.id = 'map-link';
-        $('<aside></aside>').html(`You are Located at the follwing coordiantes: <br/>Latitude: ${latitude.toFixed(2)} °, Longitude: ${longitude.toFixed(2)} °`).appendTo(display);
-        mapLink.textContent = 'Show Where you are on Map';
-        display.append(mapLink);
-        }
+        // if(isZip){
+        // mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+        // mapLink.target = '_blank'; mapLink.id = 'map-link';
+        // $('<aside></aside>').html(`You are Located at the follwing coordiantes: <br/>Latitude: ${latitude.toFixed(2)} °, Longitude: ${longitude.toFixed(2)} °`).appendTo(display);
+        // mapLink.textContent = 'Show Where you are on Map';
+        // display.append(mapLink);
+        // }
     }
 
     function decideUnits(u) {
