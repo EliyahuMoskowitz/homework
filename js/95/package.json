@@ -5,7 +5,8 @@
   "main": "http-client.js",
   "dependencies": {
     "bl": "^4.0.3",
-    "concat-stream": "^2.0.0"
+    "concat-stream": "^2.0.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {

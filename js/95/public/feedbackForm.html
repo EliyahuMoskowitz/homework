@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moskowitz Delight</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/site_wide.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <link href="images/radial_graident.jpg" rel="icon" />
+    <style>
+        input:not([type="radio"]):not([type="checkbox"]),
+        textarea {
+            margin: auto;
+            text-align: center;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        button,
+        textarea {
+            display: block;
+            padding: 1em;
+            margin-bottom: 2em;
+            box-sizing: border-box;
+            background-color: aqua;
+            color: darkgreen;
+            font-weight: 500;
+            font-family: 'Piedra', fantasy;
+        }
+
+        input:not([type="date"]):not([type="radio"]):not([type="checkbox"]),
+        textarea {
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>feedback</h1>
+    <nav>
+        <ul>
+            <li><a href="us.html" target="_blank"> Contact us or make Reservation</a></li>
+            <li><a href="menu.html" class="menu"> Our Menu</a></li>
+            <li><a href="index.html">Home Page</a></li>
+        </ul>
+    </nav>
+    <form method="POST" ><!--action="./formdata.js"-->
+        <label for="first"></label>
+        <input id="first" name="firstName" placeholder="Enter your first name" required />
+        <label for="last"></label>
+        <input id="last" name="lastName" placeholder="Enter your last name" required>
+        <label for="email"></label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        <label for="dateVisted"></label>
+        <input id="date dateVisted" name="dateVisted" type="date" required>
+        <label for="dish">choose your favorite dish: &nbsp; </label>
+        <input id="dish" name="dish" type="radio" checked value="pizza"> Pizza
+        <input id="dish" name="dish" type="radio" value="macAndCheese"> Mac and Cheese
+        <input id="dish" name="dish" type="radio" value="tunaQuiche"> Tuna Quiche
+        <input id="dish" name="dish" type="radio" value="alaskanSalmon"> Alaskan Salmon<br>
+        <label for="like">What do you like about us? &nbsp; </label>
+        <input id="like" name="food" type="checkbox" checked> Food
+        <input id="like" name="website" type="checkbox" checked> website
+        <input id="like" name="staff" type="checkbox" checked> staff<br />
+        <label for="page">Which page do you like?(choose multiple) &nbsp; </label>
+        <select name="page" id="page" multiple>
+            <option value="home.html" selected>Welcome</option>
+            <option value="us.html">About us</option>
+            <option value="menu.html">Menu</option>
+        </select>
+        <hr>
+        <label for="rating">please rate us!</label>
+        <input id="rating" name="rating" type="range" min="1" max="10" value="10">
+        <label for="comments"></label>
+        <textarea name="comments" id="comments" placeholder="Please leave us some feedback!"></textarea>
+        <button id="submit">SUBMIT</button>
+        <button type="reset">Reset</button>
+    </form>
+    <p class="copyright"> &copy; &nbsp;Moskowitz Delight</p>
+</body>
+
+</html>

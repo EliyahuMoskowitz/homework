@@ -4,7 +4,7 @@ const mymodule = require('./my-module');
 
 mymodule(process.argv[2], process.argv[3], (error, data) => {
     if(error){
-        return console.error(error);
+        return console.error('THERE WAS AN ERROR', error);
     }
 
     // for (let i = 0; i < data.length; i++) {
