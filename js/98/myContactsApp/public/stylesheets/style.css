@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.contact{
+  color: blue;
+  font-family: cursive;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+h1, label{
+  text-transform: capitalize;
+  color: red;
+}
+
+#form{
+  text-align: center;
+  display: none;
+}

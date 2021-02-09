@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moskowitz Delight</title>
+   <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>
+
+  <body>
+    <a href="http://localhost:3000/contacts">CONTACTS</a>
+    <h1>This is a page served by our Node server!</h1>
+    <h1>welcome to the moskowitz delight</h1>
+
+    <form method="POST" action="http://localhost:3000/api/contacts" id="form">
+      <nav>
+        <ul><label for="name">please enter contact name &nbsp; <input type="text" id="name" name="name" ></label></ul>
+      </nav>
+      <button id="submit"></button>
+    </form>
+
+    <button id="newContact">New Contact</button>
+    <button id="deleteContact">Delete Contact</button>
+    <button id="getContacts">Get Contacts</button>
+
+    <script src="./javascripts/ajax.js"></script>
+    
+  </body>
+
+</html>

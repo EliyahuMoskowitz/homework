@@ -1,0 +1,4 @@
+{{#contacts}}
+<p class="contacts"><b><i>  {{ name }} </i></b></p>
+{{/contacts}}
+<a href="http://localhost:3000/">Home</a>
