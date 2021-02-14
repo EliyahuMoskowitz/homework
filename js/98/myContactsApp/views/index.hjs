@@ -1,4 +1,11 @@
 {{#contacts}}
-<p class="contacts"><b><i>  {{ name }} </i></b></p>
+<p class="contacts">
+    <b><i>  {{ first }} </i></b>
+    <b><i>  {{ last }} </i></b>
+    <b><i>  {{ email }} </i></b>
+    <b><i>  {{ phone }} </i></b>
+    <!--{{ <b><i>  {{ name }} </i></b> }}-->
+</p>
 {{/contacts}}
-<a href="http://localhost:3000/">Home</a>
+{{ theTitle }}</br>
+<a href="/">Home</a>

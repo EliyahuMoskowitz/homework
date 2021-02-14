@@ -39,4 +39,6 @@ app.use(function(err, req, res, next) {
   res.render('layout', {title: 'Sorry Error', partials: {content: 'error'}});
 });
 
+app.locals.theTitle = 'This is Our App';
+
 module.exports = app;

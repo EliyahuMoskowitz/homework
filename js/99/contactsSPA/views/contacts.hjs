@@ -1,0 +1,43 @@
+<button id="add">add contact</button>
+
+<table id="contacts">
+<thead>
+    <tr>
+    <td>first</td>
+    <td>last</td>
+    <td>email</td>
+    <td>phone</td>
+    </tr>
+</thead>
+<tbody id="tbody">
+    <tr>
+        <td colspan="4" id="noCont">no contacts loaded</td>
+    </tr>
+</tbody>
+</table>
+{{!-- action="/contacts/addContact" --}}
+<form method="POST"  id="contactForm">
+    <div class="formGroup">
+        <label for="first">first:</label>
+        <input id="first" type="text" name="first"/>
+    </div>
+    <div class="formGroup">
+        <label for="last">last:</label>
+        <input id="last" type="text" name="last" required/>
+    </div>
+    <div class="formGroup">
+        <label for="email">email:</label>
+        <input id="email" name="email" type="email"/>
+    </div>
+    <div class="formGroup">
+        <label for="phone">phone:</label>
+        <input id="phone" name="phone" type="text"/>
+    </div>
+    <div class="buttons">
+        <button id="addEdit">add</button>
+        <button type="button" id="cancel">cancel</button>
+    </div>
+</form>
+
+
+<script src="/javascripts/contacts.js"></script>

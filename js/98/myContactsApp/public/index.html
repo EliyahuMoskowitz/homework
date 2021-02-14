@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moskowitz Delight</title>
    <link rel="stylesheet" href="./stylesheets/style.css">
+   <link rel="stylesheet" href="./stylesheets/contacts.css">
   </head>
 
   <body>
     <a href="http://localhost:3000/contacts">CONTACTS</a>
-    <h1>This is a page served by our Node server!</h1>
+    <h1>This is a page served by our Express Node server!</h1>
     <h1>welcome to the moskowitz delight</h1>
 
-    <form method="POST" action="http://localhost:3000/api/contacts" id="form">
+     <!-- <form method="POST" action="http://localhost:3000/api/contacts" id="form">
       <nav>
         <ul><label for="name">please enter contact name &nbsp; <input type="text" id="name" name="name" ></label></ul>
       </nav>
@@ -25,8 +26,53 @@
     <button id="deleteContact">Delete Contact</button>
     <button id="getContacts">Get Contacts</button>
 
-    <script src="./javascripts/ajax.js"></script>
-    
+    <script src="./javascripts/ajax.js"></script> -->
+
+    <!-- contacts -->
+
+   <button id="add">add contact</button>
+   <!-- <link id="add" href="">add contact</link>  -->
+
+  <table id="contacts">
+    <thead>
+      <tr>
+        <td>first</td>
+        <td>last</td>
+        <td>email</td>
+        <td>phone</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4" id="noCont">no contacts loaded</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form method="POST" action="http://localhost:3000/api/addContact" id="contactForm">
+    <div class="formGroup">
+      <label for="first">first:</label>
+      <input id="first" type="text" name="first">
+    </div>
+    <div class="formGroup">
+      <label for="last">last:</label>
+      <input id="last" type="text" name="last" required>
+    </div>
+    <div class="formGroup">
+      <label for="email">email:</label>
+      <input id="email" name="email" type="email">
+    </div>
+    <div class="formGroup">
+      <label for="phone">phone:</label>
+      <input id="phone" name="phone" type="text">
+    </div>
+    <div class="buttons">
+      <button id="addEdit">add</button>
+      <button type="button" id="cancel">cancel</button>
+    </div>
+  </form>
+  <script src="./javascripts/contacts.js"></script>
+     
   </body>
 
 </html>

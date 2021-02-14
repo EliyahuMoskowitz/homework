@@ -1,0 +1,38 @@
+<a href="/contacts/addContact" id="add">add contact</a>
+<link rel="stylesheet" href="/stylesheets/contacts.css">
+
+  <table id="contacts">
+    <thead>
+      <tr>
+        <td>first</td>
+        <td>last</td>
+        <td>email</td>
+        <td>phone</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#noContacts}}
+      <tr>
+        <td colspan="4" id="noCont">no contacts loaded</td>
+      </tr>
+      {{/noContacts}}
+      
+        {{#contacts}}
+        <tr>
+          <td>{{first}}</td>
+          <td>{{last}}</td>
+          <td>{{email}}</td>
+          <td>{{phone}}</td>
+          <td id="links">
+            <a href="/contacts/deleteContact/{{id}}">Delete</a> &nbsp; 
+            <a href="/contacts/editContact/{{id}}">Edit</a>
+            <!---form method="POST" action="/contacts/deleteContact">
+            <button name="delete" value="{{id}}">Delete</button>
+          </form-->
+          </td>
+        </tr>
+        {{/contacts}}
+    </tbody>
+  </table>
+
+ 

@@ -1,0 +1,88 @@
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    color: pink;
+    background-color: purple;
+  }
+
+  th,
+  td {
+    border: 1px solid black;
+    padding: 15px;
+  }
+
+  tbody > tr > button{
+    width: 100%;
+    height: 45px;
+  }
+
+ tbody > tr:hover > td:not(:last-child) {
+    background-color: lightcoral;
+    color: lightgreen;
+  }
+
+  thead > tr > td{
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+    background-color: lightblue;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  #contactForm {
+    background-color: pink;
+    color: blue;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 17em;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8.5em;
+    margin-top: -5em;
+    border: 5px dotted yellow;
+    border-radius: 20%;
+    display: none;
+    height: fit-content;
+  }
+
+  .formGroup {
+    margin-bottom: .5em;
+  }
+
+  .formGroup label {
+    width: 3em;
+    display: inline-block;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  #noCont{
+    text-align: center;
+  }
+
+  #add{
+    color: blue;
+    text-transform: capitalize;
+    font-size: large;
+  }
+
+.editDelete{
+  width: 'fitContent';
+  height: '20px';
+  color: 'green';
+  background-color: orange;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'cursive';
+}
+
+tbody > tr > td:last-child{
+  display: flex;
+  justify-content: space-evenly;
+} 
