@@ -29,16 +29,23 @@ console.log(body, 'in add');
     console.log('done add', contacts);
     res.redirect('/contacts');
 });
-
-router.post('/deleteContact', function({body}, res, next) {  
-console.log(body, 'in delete');
+// in AJAX we used DELETE
+// router.post('/deleteContact', function({body}, res, next) {  
+// console.log(body, 'in delete');
     
-    contacts = contacts.filter(c => c.id !== +body.delete);
+//     contacts = contacts.filter(c => c.id !== +body.delete);
 
-    console.log('done delete', contacts);
-    res.redirect('/contacts');
-    // res.end();
-});
+//     console.log('done delete', contacts);
+// });
+
+// in AJAX we used DELETE
+router.delete('/deleteContact', function({body}, res, next) {  
+  console.log(body, 'in delete');
+      
+      contacts = contacts.filter(c => c.id !== +body.delete);
+  
+      console.log('done delete', contacts);
+  });
 
 router.post('/editContact', function({body}, res, next) { 
 console.log(body, 'in edit');

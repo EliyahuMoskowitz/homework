@@ -1,0 +1,22 @@
+#contactForm {
+    background-color: pink;
+    color: blue;
+    padding: 1em;
+    width: 17em;
+    border: 5px dotted yellow;
+    border-radius: 20%;
+    height: fit-content;
+  }
+
+  .formGroup {
+    margin-bottom: .5em;
+  }
+
+  .formGroup label {
+    width: 3em;
+    display: inline-block;
+  }
+
+  .buttons {
+    text-align: center;
+  }

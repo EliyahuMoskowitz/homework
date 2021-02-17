@@ -12,7 +12,7 @@
     }
 
     const addEdit = get('addEdit'), contactForm = get('contactForm'), firstInput = get('first'),
-        lastInput = get('last'), emailInput = get('email'), phoneInput = get('phone'), contactsTable = get('contacts'), tbody = get('tbody');
+        lastInput = get('last'), emailInput = get('email'), phoneInput = get('phone'), contactsTable = get('contacts');//, tbody = get('tbody');
   
 async function getContacts(){
   try{
@@ -50,16 +50,17 @@ getContacts();
             deleteButton.className = 'editDelete';
             deleteButton.innerText = 'Delete';
 
-            deleteButton.addEventListener('click', async () => {
+            deleteButton.addEventListener('click', () => {
+              console.log('starting ajax post');
               try{
-                  await fetch(`/contacts/deleteContact`, 
+                  fetch(`/contacts/deleteContact`, 
                 {
-                    // method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                    method: 'DELETE',
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    // method: 'DELETE',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({delete: c.id}) // body data type must match "Content-Type" header
                   });
-                console.log('doing ajax post');
+                console.log('finished ajax post');
                 // tbody.innerHTML = '';
                 window.location = window.location;
                 // getContacts();

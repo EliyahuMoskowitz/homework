@@ -1,0 +1,6 @@
+<a href="/">Home</a>
+
+<h1>{{ message }}</h1>
+<p>{{title}}</p>
+<h2>{{ error.status }}</h2>
+<pre>{{ error.stack }}</pre>

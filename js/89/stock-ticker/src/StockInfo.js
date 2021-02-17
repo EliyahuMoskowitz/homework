@@ -30,7 +30,7 @@ function StockInfo () {
             <div id="compInfo" >
                 <h1>{ticker} - {name}</h1>
                 <p>{desc}</p>
-                <Update symbol={symbol} />
+                <Update symbol={symbol} isDesc={desc ? true : false} />
             </div>
         );
     }

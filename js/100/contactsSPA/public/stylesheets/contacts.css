@@ -1,0 +1,119 @@
+body{
+  width: 90%;
+  margin: auto;
+  background-color: lightgreen;
+}
+
+table {
+    width: 80%;
+    pad: 50px;
+    margin: auto;
+    /* border-collapse: collapse; */
+    /* border: 30px solid pink; */
+    /* border-radius: 45%; */
+    color: rgb(216, 18, 127);
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    /* background-color: purple; */
+  }
+  h1, label{
+    text-transform: capitalize;
+    color: red;
+  }
+
+  th,
+  td {
+    border: 1px solid black;
+    padding: 15px;
+  }
+
+  tbody > tr > button{
+    width: 100%;
+    height: 45px;
+  }
+
+ tbody > tr:hover > td:not(:last-child) {
+    background-color: lightcoral;
+    color: lightgreen;
+  }
+
+  thead > tr > td{
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+    background-color: lightblue;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  #contactForm {
+    background-color: pink;
+    color: blue;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 17em;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8.5em;
+    margin-top: -5em;
+    border: 5px dotted yellow;
+    border-radius: 20%;
+    display: none;
+    height: fit-content;
+  }
+
+  .formGroup {
+    margin-bottom: .5em;
+  }
+
+  .formGroup label {
+    width: 3em;
+    display: inline-block;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  #noCont{
+    text-align: center;
+    text-transform: capitalize;
+    width: 227%;
+  }
+
+  #add{
+    color: blue;
+    background-color: chartreuse;
+    border: 5px double yellow;
+    border-radius: 10%;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-family: fantasy;
+  }
+  #add:hover{
+    color: chartreuse;
+    background-color: blue;
+  }
+
+.editDelete{
+  width: 'fitContent';
+  /* padding: 10px; */
+  height: '20px';
+  color: 'green';
+  background-color: orange;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'cursive';
+}
+.editDelete:hover{
+  color: orange;
+  background-color: blue;
+}
+
+tbody > tr > td:last-child{
+  display: flex;
+  justify-content: space-evenly;
+} 

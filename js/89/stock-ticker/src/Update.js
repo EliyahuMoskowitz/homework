@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 // let oldPrice;
 let intervalId;
 
-function Update({symbol}) {
+function Update({symbol, isDesc}) {
     const api_key = 'OmZjY2QyNmJjMzBmYzE0YTk0YmE3NjJhNjAyYTExNmUy';
     let [info, setInfo] = useState({});
     // oldPrice = info.last_price;
@@ -43,12 +43,14 @@ function Update({symbol}) {
     const arrow = price >= oldPrice ? "\u2191" : "\u2193"; 
     const colorPrice = price >= oldPrice ? 'green' : 'red';
 
+    let updateReturn = isDesc ? 
+        <><span style={{color: colorPrice}}>${price || oldPrice}{arrow}</span>
+        <span> &nbsp; Last Updated: {date /*updated*/} &nbsp; {time}</span></>
+     : "Unable to access this company's stock-info at the moment. Please try again later.";
+
 // html entities  &uarr; (up), &darr;  (down)
     return (
-        <h2>
-            <span style={{color: colorPrice}}>${price || oldPrice}{arrow}</span>
-            <span> &nbsp; Last Updated: {date /*updated*/} &nbsp; {time}</span>
-        </h2>
+        <h2> {updateReturn} </h2>
     );
 }
 
