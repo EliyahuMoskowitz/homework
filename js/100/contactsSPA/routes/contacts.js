@@ -10,10 +10,12 @@ router.get('/', function(req, res, next) {
 router.get('/api', function(req, res, next) {
   db.query('SELECT * FROM contacts', (error, results, fields) => {
     if(error){
-      res.statusCode = 404;
+      // res.statusCode = 404;
+      // return res.end();
+      res.sendStatus(500);    // internal server error
     }
-    res.statusCode = 201;
-    res.send( results);
+
+    return res.send( results);      // this is 200 status: success
   });
 });
 
@@ -25,14 +27,15 @@ router.post('/addContact', function({body}, res, next) {
         [body.first, body.last, body.email, body.phone],
         (error, results, fields) => {
           if(error){
-            res.statusCode = 404;
+            // res.statusCode = 404;
+            res.sendStatus(500);// internal server error
           }
         
-        res.statusCode = 201;
-        res.send(JSON.stringify(results.insertId));   // couldn't send number, thought was a status code in deprecated function
+        res.statusCode = 201;     // created!
+        debug(JSON.stringify(results));
+        return res.send(JSON.stringify(results.insertId));   // couldn't send number, thought was a status code in deprecated function
         // res.send(results.insertId); 
         // res.redirect('/contacts');
-        debug(JSON.stringify(results));
             });
 });
 // in AJAX we are using PUT
@@ -43,13 +46,14 @@ router.put('/addContact', function({body}, res, next) {
         [body.first, body.last, body.email, body.phone],
         (error, results, fields) => {
           if(error){
-            res.statusCode = 404;
+            // res.statusCode = 404;
+            res.sendStatus(500);// internal server error
           }
         
-        res.statusCode = 201;
-        res.send(JSON.stringify(results.insertId));   // couldn't send number, thought was a status code in deprecated function
-        // res.redirect('/contacts');
+        res.statusCode = 201;   //created!
         debug(JSON.stringify(results));
+        return res.send(JSON.stringify(results.insertId));   // couldn't send number, thought was a status code in deprecated function
+        // res.redirect('/contacts');
             });
 });
 
@@ -59,13 +63,14 @@ router.post('/deleteContact', function({body}, res, next) {
   debug(JSON.stringify(body, 'in delete'));
     global.db.query('DELETE FROM contacts WHERE id = ?', [+body.delete],  (error, results, fields) => {
       if(error){
-        res.statusCode = 404;
+        // res.statusCode = 404;
+        res.sendStatus(500);// internal server error
       }
       if(!results.affectedRows){
-        res.statusCode = 404;
+        res.statusCode = 404;       // page not found
        return res.send(`Could not delete contact ${body.delete}, sorry! `);
       }
-      res.statusCode = 201;
+      res.statusCode = 201;//created
       res.end();    // very important!
       debug(JSON.stringify(body, 'done delete'));
         });
@@ -74,10 +79,10 @@ router.post('/deleteContact', function({body}, res, next) {
 // in AJAX we are using DELETE
 router.delete('/deleteContact', function({body}, res, next) {  
   // console.log(body, 'in delete');
-  debug(JSON.stringify(body, 'in delete'));
+  debug(`${JSON.stringify(body)}, in delete`);
   global.db.query('DELETE FROM contacts WHERE id = ?', [+body.delete],  (error, results, fields) => {
     if(error){
-      res.statusCode = 404;
+      res.sendStatus(500);// internal server error
     }
     if(!results.affectedRows){
       res.statusCode = 404;
@@ -97,8 +102,8 @@ router.post('/editContact', function({body}, res, next) {
       [body.first, body.last, body.email, body.phone, +body.edit],
         (error, results, fields) => {
           if(error){
-            res.statusCode = 404;
             debug(JSON.stringify('sql error'));
+            return res.sendStatus(500);// internal server error
           }
           if(!results.affectedRows){
             res.statusCode = 404;
