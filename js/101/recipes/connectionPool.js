@@ -4,8 +4,8 @@ const mysl = require('mysql');
 const pool = mysl.createPool({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'nodeuser',
-    password: 'test123',
+    user: processs.env.sqlusername,  //'nodeuser' 
+    password: processs.env.sqlpassword,   //'test123',
     database: 'nodeuser'
 });
 

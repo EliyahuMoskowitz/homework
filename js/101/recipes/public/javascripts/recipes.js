@@ -23,7 +23,7 @@
                    if (Object.hasOwnProperty.call(categories, cat)) {
                        let category = categories[cat];
                        let select = $(`<select id="theSelect">
-                                            <option value=null >${cat}</option>
+                                            <option value=${null} >${cat}</option>
                                         </select>`).prependTo(recipes);
                        category.forEach(rec => {
                         let option = $(`<option value=${rec.id} >${rec.name}</option>`).appendTo(select);
@@ -46,7 +46,7 @@
     });
 
     function getRecipe(id) {
-        if(id !== 'null'){
+        if(JSON.parse(id)){
         fetch(`/recipes/${id}`)
             .then(r => {
                 if (!r.ok) {
