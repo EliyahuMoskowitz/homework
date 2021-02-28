@@ -1,0 +1,34 @@
+<link href="\stylesheets\index.css" rel="stylesheet" />
+
+<a href="/">Back to Shopping</a>
+
+{{#empty}}
+    <h1>You have nothing in your Cart yet :( goShopping!</h1>
+{{/empty}}
+
+<div id="cartItems">
+{{#cartItems}}
+<section class="item">
+    <h4 class="name">{{item.name}}</h4>
+    <h1>${{item.price}}</h1>
+    <img src="{{item.img}}" alt="{{item.name}}" />
+    <ul class="list-unstyled mt-3 mb-4">
+        <li class="name">{{item.name}}</li> 
+        <li>{{item.description}}</li>
+        <li id="quantity">You have {{quantity}} of this product</li>
+        <li id="subtotal">subtotal: ${{subtotal}}</li>
+        <li>
+            <input name="addOrRemove" type="number" placeholder="add to or remove from cart">
+            <button id="addOne">Add</button>
+            <button id="removeOne">Remove</button>
+            <button id="removeAll">Remove All</button>
+        </li>
+    </ul>
+</section>
+{{/cartItems}}
+</div>
+{{#showTotal}}
+<h1 id="total">Total: ${{total}}</h1>
+{{/showTotal}}
+
+<script src="/javascripts/viewCart.js"></script>

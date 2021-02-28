@@ -1,0 +1,49 @@
+body{
+  background-color: lightgreen;
+}
+
+img {
+  height: 10em;
+}
+a{
+  color: darkgreen;
+  font-family: cursive;
+  font-style: italic;
+}
+a:hover{
+  color: darkorange;
+  cursor: pointer;
+}
+
+#cartItems{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* #item{
+  grid-column: ;
+} */
+
+#quantity{
+  font-family: cursive;
+  color: hotpink;
+  font-size: 2rem;
+}
+
+#subtotal{
+  font-family: fantasy;
+  color: blue;
+  font-size: 3rem;
+}
+#total{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: purple;
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+.name{
+  text-transform: capitalize;
+}
