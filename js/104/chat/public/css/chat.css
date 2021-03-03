@@ -1,0 +1,60 @@
+header{
+  text-align: center;
+  background-color: pink;
+  color: purple;
+  font-family: fantasy, sans-serif;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+#messages {
+  height: 10em;
+  border: 1px solid black;
+  margin-bottom: .5em;
+}
+
+#messageForm {
+  display: flex;
+}
+
+#message {
+  flex: 1;
+  margin-right: .5em;
+}
+
+#messagesContainer, #participants {
+  display: none;
+}
+
+#participants{
+  color: blue;
+  background-color: lightgreen;
+  font-family: cursive;
+  font-weight: bold;
+  font-style: italic;
+  border: 10px dashed pink;
+  border-radius: 10%;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  text-align: center;
+}
+.chatters:hover{
+  color: red;
+}
+.chatUsers{
+  color: darkmagenta;
+  font-weight: bold;
+  font-style: italic;
+  font-family: fantasy;
+}
+
+.typing{
+display: none;
+color: red;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#error {
+  color: red;
+}
