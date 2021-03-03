@@ -37,7 +37,7 @@ let ourChatters = [], myName;
   socketIo.on('noPrivate', msg => alert(msg));
 
   const participants = $('#participants');  let isShowing;
-  messagesContainer.append($(`<button>Show Participants</button>`).on('click', function() {
+  messagesContainer.append($(`<button id="participantsButton">Show Participants</button>`).on('click', function() {
     isShowing = !isShowing; let button = $(this);
     isShowing ? button.text('Hide Participants') : button.text('Show Participants');
     isShowing ? participants.slideDown() : participants.slideUp();
@@ -46,17 +46,27 @@ let ourChatters = [], myName;
   socketIo.on('chatters', chatters => {
     chatters.filter(ch => !ourChatters.find(oc => oc.name === ch)).forEach(c => {
       const typing = $('<span class="typing">typing....</span>');
-      participants.append($(`<div class="chatters">${c} </div>`).append(typing)
+      participants.append($(`<div class="chatters">${c} ${c === myName ? '(ME)': ''} </div>`).append(typing)
               .on('click', () => messageInput.val(`@${c}@(private): `)));
     console.log(chatters);
-    ourChatters = chatters.map(c => ({name: c, typing: typing}));
+    ourChatters.push({name: c, typing: typing});
     });
+    // ourChatters = chatters.map(c => ({name: c, typing: typing}));
   });
 
   messageInput.on('input', () => {
-    socketIo.emit('typing', myName);
+    let emitTypingObject = {name: myName, private: false};
+    if(messageInput.val().startsWith('@')){
+      emitTypingObject.private = messageInput.val().split('@')[1];
+    }
+    socketIo.emit('typing', emitTypingObject);
   });
 
-  socketIo.on('typing', () => {console.log('typing event'); ourChatters.forEach(c => c.typing.slideDown())});    
+  socketIo.on('typing', name => {
+    console.log('typing event'); 
+    let theTyper = ourChatters.find(c => c.name === name).typing;
+    theTyper.slideDown();
+    setTimeout(() => theTyper.slideUp(), 5000);
+  });    
       
 }());

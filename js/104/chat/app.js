@@ -51,8 +51,9 @@ socketIo.on("connection", socket => {
         }
       });
 
-      socket.on('typing', name => chatters.filter(ch => ch.name === name)
-            .forEach(c => c.socket.emit('typing', 'typing'/*, {expiresInMinutes: 0.1}*/)));
+      socket.on('typing', typerObject => chatters.filter(ch => ch.name !== typerObject.name && 
+        (!typerObject.private || typerObject.private === ch.name))
+            .forEach(c => c.socket.emit('typing', typerObject.name/*, {expiresInMinutes: 0.1}*/)));
     }
   });
 });

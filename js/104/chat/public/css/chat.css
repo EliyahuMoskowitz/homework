@@ -1,3 +1,7 @@
+body{
+  background-color: lightseagreen;
+}
+
 header{
   text-align: center;
   background-color: pink;
@@ -5,21 +9,62 @@ header{
   font-family: fantasy, sans-serif;
   font-size: 2rem;
   padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+#loginForm{
+  text-align: center;
+  background-color: yellow;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+#name{
+  background-color: firebrick;
+  color: aliceblue;
+  padding: 20px;
 }
 
 #messages {
   height: 10em;
-  border: 1px solid black;
+  border: 10px double orange;
+  border-radius: 5%;
+  overflow: auto;
   margin-bottom: .5em;
+  color: white;
+  font-size: 1rem;
+  font-family: cursive;
 }
 
 #messageForm {
   display: flex;
 }
 
+#messageForm > button, #loginForm > button{
+  background-color: limegreen;
+  color: darkred;
+  border: 5px solid purple;
+  border-radius: 20%;
+  padding: 20px;
+  font-family: cursive;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#messageForm > button:hover, #loginForm > button:hover{
+  background-color: darkred;
+  color: limegreen ;
+  border: 5px solid yellow;
+}
 #message {
   flex: 1;
   margin-right: .5em;
+  background-color: linen;
+  color: blue;
 }
 
 #messagesContainer, #participants {
@@ -37,6 +82,7 @@ header{
   width: 350px;
   height: 350px;
   margin: auto;
+  overflow: auto;
   text-align: center;
 }
 .chatters:hover{
@@ -47,6 +93,24 @@ header{
   font-weight: bold;
   font-style: italic;
   font-family: fantasy;
+}
+
+#participantsButton{
+  margin: 10px 45%;
+  background-color: rgb(0, 255, 149);
+  color: rgb(241, 13, 127);
+  font-family: Cambria, Cochin, Georgia, serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  font-style: italic;
+  padding: 10px;
+  border: 5px dashed darkorange;
+  border-radius: 20%;
+}
+#participantsButton:hover{
+  background-color: hotpink;
+  color:  rgb(0, 110, 255);
+  border-color: darkturquoise;
 }
 
 .typing{
