@@ -1,0 +1,28 @@
+{{#thePosts}}
+<div class="post">
+  <h2>{{title}}</h2>
+  <h3>by {{author}} on {{date}}</h3>
+  <div>{{body}}</div>
+</div>
+
+  <p>Comments: </p>
+  <h4>{{comments}}</h4>
+   
+  <button id="addComment" value="{{_id}}" >add comment</button>
+
+  
+{{/thePosts}}
+
+<form id="commentForm">
+  <label>author:
+    <input id="author">
+  </label>
+  <label>Subject:
+    <input id="subject">
+  </label>
+  <label>Comment:
+    <textarea id="comment"></textarea>
+  </label>
+  <button id="saveComment">save comment</button>
+  {{!-- <button id="cancel">cancel</button> --}}
+</form>

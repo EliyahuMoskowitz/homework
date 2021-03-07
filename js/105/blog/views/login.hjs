@@ -1,0 +1,14 @@
+<!--link href="/css/addPost.css" rel="stylesheet"-->
+<h2>Please Log - In or Register</h2>
+<form method="POST" action="/login">
+  <label>User Name:
+    <input name="userName">
+  </label>
+  <label>Password:
+    <input name="password"></input>
+  </label>
+  <label>Check if New User:
+    <input type="checkbox" name="newUser">
+  </label>
+  <button>Log In</button>
+</form>
