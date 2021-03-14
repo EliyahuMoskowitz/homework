@@ -1,0 +1,9 @@
+#msgBox{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: lightpink;
+    color: teal;
+    width: 300px;
+    height: 300px;
+}

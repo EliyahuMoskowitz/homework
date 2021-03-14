@@ -1,0 +1,32 @@
+.msgBox{
+    background-color: lightblue;
+    padding: 1em;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    border: 1px solid black;
+}
+.msg{
+    overflow: auto;
+    height: 100%;
+    display: inline-block;
+}
+.buttons{
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons > button{
+    border: 5px hotpink double;
+    color: red;
+    background-color: seagreen;
+    border-radius: 25%;
+    padding: 10px;
+}

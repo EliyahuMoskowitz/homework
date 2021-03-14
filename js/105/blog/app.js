@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient('mongodb://localhost:27017', { useUnifiedTopology: true });
+const mongo = require('mongodb');
+const client = new mongo.MongoClient('mongodb://localhost:27017', { useUnifiedTopology: true });
 
 let posts, db;
 (async () => {
@@ -35,7 +35,7 @@ let posts, db;
 app.locals.title = 'PCS MERN Blog'
 
 app.get('/', async (req, res, next) => {
-  if(req.session.login){
+  if(!req.session.login){
   const thePosts = await posts.find().toArray();
   res.render('layout', {
     subtitle: 'Blog Posts',
@@ -111,7 +111,11 @@ app.route('/addPost')
       author: req.body.author || req.session.login
     };
 
-    await posts.updateOne({_id: req.body.postId}, {$push: {comments: comment}});
+    await posts.updateOne({_id: mongo.ObjectId(req.body.postId)}, {$push: {comments: comment}});
+
+    res.status(201)
+    //.location()
+        .send(comment);
   });
 
 app.listen(80);

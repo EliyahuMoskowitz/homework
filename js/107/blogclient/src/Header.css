@@ -1,0 +1,7 @@
+header {
+  border: 1px solid blue;
+  background-color: lightblue;
+  padding: 1em;
+  text-align: center;
+  border-radius: 8px;
+}

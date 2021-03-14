@@ -14,7 +14,7 @@
         e.preventDefault();
         commentForm.css('display', 'none');
 
-        await fetch('/addComment', {
+        let comment = await fetch('/addComment', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({
@@ -25,6 +25,7 @@
             })
         });
     });
+
 
 })();
 

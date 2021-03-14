@@ -6,7 +6,9 @@
 </div>
 
   <p>Comments: </p>
-  <h4>{{comments}}</h4>
+  {{#comments}}
+      <h4>{{comment}}</h4>
+  {{/comments}}
    
   <button id="addComment" value="{{_id}}" >add comment</button>
 
